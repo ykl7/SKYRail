@@ -1,0 +1,714 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A7E91CBBD70F00A4BD5E /* main.m */; };
+		1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A7EC1CBBD70F00A4BD5E /* AppDelegate.m */; };
+		1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1837A7F11CBBD70F00A4BD5E /* Main.storyboard */; };
+		1837A7F51CBBD70F00A4BD5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1837A7F41CBBD70F00A4BD5E /* Assets.xcassets */; };
+		1837A7F81CBBD70F00A4BD5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1837A7F61CBBD70F00A4BD5E /* LaunchScreen.storyboard */; };
+		1837A8031CBBD71000A4BD5E /* SKYRailTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8021CBBD71000A4BD5E /* SKYRailTests.m */; };
+		1837A80E1CBBD71000A4BD5E /* SKYRailUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A80D1CBBD71000A4BD5E /* SKYRailUITests.m */; };
+		1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8211CBBD9A500A4BD5E /* SignUpTableViewController.m */; };
+		1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */; };
+		1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */; };
+		183A51981CBC3BE200B123C3 /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */; };
+		183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 183A51991CBC437A00B123C3 /* launch scr.jpeg */; };
+		186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */; };
+		186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419021CBC23BC0086A237 /* EditUserTableViewController.m */; };
+		186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419051CBC23C70086A237 /* ChangePasswordTableViewController.m */; };
+		1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864190B1CBC244C0086A237 /* TrainNameSearchTableViewController.m */; };
+		1864190F1CBC24610086A237 /* BetweenTwoStationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864190E1CBC24610086A237 /* BetweenTwoStationsTableViewController.m */; };
+		186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419111CBC247E0086A237 /* ScheduleTableViewController.m */; };
+		186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419181CBC25960086A237 /* BookTicketTableViewController.m */; };
+		1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1837A7FF1CBBD71000A4BD5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1837A7DD1CBBD70F00A4BD5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1837A7E41CBBD70F00A4BD5E;
+			remoteInfo = SKYRail;
+		};
+		1837A80A1CBBD71000A4BD5E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1837A7DD1CBBD70F00A4BD5E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1837A7E41CBBD70F00A4BD5E;
+			remoteInfo = SKYRail;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1837A7E51CBBD70F00A4BD5E /* SKYRail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKYRail.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1837A7E91CBBD70F00A4BD5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1837A7EB1CBBD70F00A4BD5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1837A7EC1CBBD70F00A4BD5E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1837A7F21CBBD70F00A4BD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1837A7F41CBBD70F00A4BD5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1837A7F71CBBD70F00A4BD5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1837A7F91CBBD70F00A4BD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1837A7FE1CBBD71000A4BD5E /* SKYRailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKYRailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1837A8021CBBD71000A4BD5E /* SKYRailTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKYRailTests.m; sourceTree = "<group>"; };
+		1837A8041CBBD71000A4BD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1837A8091CBBD71000A4BD5E /* SKYRailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SKYRailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1837A80D1CBBD71000A4BD5E /* SKYRailUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKYRailUITests.m; sourceTree = "<group>"; };
+		1837A80F1CBBD71000A4BD5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1837A8201CBBD9A500A4BD5E /* SignUpTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignUpTableViewController.h; sourceTree = "<group>"; };
+		1837A8211CBBD9A500A4BD5E /* SignUpTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignUpTableViewController.m; sourceTree = "<group>"; };
+		1837A8231CBBD9B700A4BD5E /* LoginTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginTableViewController.h; sourceTree = "<group>"; };
+		1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
+		1837A82A1CBBECA300A4BD5E /* BookingHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingHistoryTableViewController.h; sourceTree = "<group>"; };
+		1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingHistoryTableViewController.m; sourceTree = "<group>"; };
+		183A51961CBC3BE200B123C3 /* BaseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchViewController.h; sourceTree = "<group>"; };
+		183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchViewController.m; sourceTree = "<group>"; };
+		183A51991CBC437A00B123C3 /* launch scr.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launch scr.jpeg"; sourceTree = "<group>"; };
+		186418F91CBC22EE0086A237 /* TicketDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketDetailsTableViewController.h; sourceTree = "<group>"; };
+		186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketDetailsTableViewController.m; sourceTree = "<group>"; };
+		186419011CBC23BC0086A237 /* EditUserTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditUserTableViewController.h; sourceTree = "<group>"; };
+		186419021CBC23BC0086A237 /* EditUserTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditUserTableViewController.m; sourceTree = "<group>"; };
+		186419041CBC23C70086A237 /* ChangePasswordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordTableViewController.h; sourceTree = "<group>"; };
+		186419051CBC23C70086A237 /* ChangePasswordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordTableViewController.m; sourceTree = "<group>"; };
+		1864190A1CBC244C0086A237 /* TrainNameSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrainNameSearchTableViewController.h; sourceTree = "<group>"; };
+		1864190B1CBC244C0086A237 /* TrainNameSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrainNameSearchTableViewController.m; sourceTree = "<group>"; };
+		1864190D1CBC24610086A237 /* BetweenTwoStationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BetweenTwoStationsTableViewController.h; sourceTree = "<group>"; };
+		1864190E1CBC24610086A237 /* BetweenTwoStationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BetweenTwoStationsTableViewController.m; sourceTree = "<group>"; };
+		186419101CBC247E0086A237 /* ScheduleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScheduleTableViewController.h; sourceTree = "<group>"; };
+		186419111CBC247E0086A237 /* ScheduleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScheduleTableViewController.m; sourceTree = "<group>"; };
+		186419171CBC25960086A237 /* BookTicketTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTicketTableViewController.h; sourceTree = "<group>"; };
+		186419181CBC25960086A237 /* BookTicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTicketTableViewController.m; sourceTree = "<group>"; };
+		1864191B1CBC38070086A237 /* UserDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsTableViewController.h; sourceTree = "<group>"; };
+		1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsTableViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1837A7E21CBBD70F00A4BD5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A7FB1CBBD71000A4BD5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A8061CBBD71000A4BD5E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1837A7DC1CBBD70F00A4BD5E = {
+			isa = PBXGroup;
+			children = (
+				1837A7E71CBBD70F00A4BD5E /* SKYRail */,
+				1837A8011CBBD71000A4BD5E /* SKYRailTests */,
+				1837A80C1CBBD71000A4BD5E /* SKYRailUITests */,
+				1837A7E61CBBD70F00A4BD5E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1837A7E61CBBD70F00A4BD5E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1837A7E51CBBD70F00A4BD5E /* SKYRail.app */,
+				1837A7FE1CBBD71000A4BD5E /* SKYRailTests.xctest */,
+				1837A8091CBBD71000A4BD5E /* SKYRailUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1837A7E71CBBD70F00A4BD5E /* SKYRail */ = {
+			isa = PBXGroup;
+			children = (
+				1837A81B1CBBD71900A4BD5E /* App Delegate */,
+				183A519B1CBC455600B123C3 /* Controllers */,
+				1837A7F11CBBD70F00A4BD5E /* Main.storyboard */,
+				1837A7F41CBBD70F00A4BD5E /* Assets.xcassets */,
+				1837A7F61CBBD70F00A4BD5E /* LaunchScreen.storyboard */,
+				1837A7F91CBBD70F00A4BD5E /* Info.plist */,
+				1837A7E81CBBD70F00A4BD5E /* Supporting Files */,
+			);
+			path = SKYRail;
+			sourceTree = "<group>";
+		};
+		1837A7E81CBBD70F00A4BD5E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				183A51991CBC437A00B123C3 /* launch scr.jpeg */,
+				1837A7E91CBBD70F00A4BD5E /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1837A8011CBBD71000A4BD5E /* SKYRailTests */ = {
+			isa = PBXGroup;
+			children = (
+				1837A8021CBBD71000A4BD5E /* SKYRailTests.m */,
+				1837A8041CBBD71000A4BD5E /* Info.plist */,
+			);
+			path = SKYRailTests;
+			sourceTree = "<group>";
+		};
+		1837A80C1CBBD71000A4BD5E /* SKYRailUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1837A80D1CBBD71000A4BD5E /* SKYRailUITests.m */,
+				1837A80F1CBBD71000A4BD5E /* Info.plist */,
+			);
+			path = SKYRailUITests;
+			sourceTree = "<group>";
+		};
+		1837A81B1CBBD71900A4BD5E /* App Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				1837A7EB1CBBD70F00A4BD5E /* AppDelegate.h */,
+				1837A7EC1CBBD70F00A4BD5E /* AppDelegate.m */,
+			);
+			name = "App Delegate";
+			sourceTree = "<group>";
+		};
+		1837A81C1CBBD72100A4BD5E /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				1837A8261CBBE24100A4BD5E /* Sign Up */,
+				1837A8271CBBE24700A4BD5E /* Log In */,
+			);
+			name = Launch;
+			sourceTree = "<group>";
+		};
+		1837A8261CBBE24100A4BD5E /* Sign Up */ = {
+			isa = PBXGroup;
+			children = (
+				1837A8201CBBD9A500A4BD5E /* SignUpTableViewController.h */,
+				1837A8211CBBD9A500A4BD5E /* SignUpTableViewController.m */,
+			);
+			name = "Sign Up";
+			sourceTree = "<group>";
+		};
+		1837A8271CBBE24700A4BD5E /* Log In */ = {
+			isa = PBXGroup;
+			children = (
+				1837A8231CBBD9B700A4BD5E /* LoginTableViewController.h */,
+				1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */,
+			);
+			name = "Log In";
+			sourceTree = "<group>";
+		};
+		1837A82D1CBBECAA00A4BD5E /* Booking History */ = {
+			isa = PBXGroup;
+			children = (
+				1837A82A1CBBECA300A4BD5E /* BookingHistoryTableViewController.h */,
+				1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */,
+				186418FC1CBC23120086A237 /* Ticket Details */,
+			);
+			name = "Booking History";
+			sourceTree = "<group>";
+		};
+		183A519B1CBC455600B123C3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				1864191A1CBC25A40086A237 /* Book Ticket */,
+				186419131CBC24A20086A237 /* Search */,
+				186419071CBC23D00086A237 /* User */,
+				1837A82D1CBBECAA00A4BD5E /* Booking History */,
+				1837A81C1CBBD72100A4BD5E /* Launch */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		186418FC1CBC23120086A237 /* Ticket Details */ = {
+			isa = PBXGroup;
+			children = (
+				186418F91CBC22EE0086A237 /* TicketDetailsTableViewController.h */,
+				186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */,
+			);
+			name = "Ticket Details";
+			sourceTree = "<group>";
+		};
+		186419071CBC23D00086A237 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				1864191B1CBC38070086A237 /* UserDetailsTableViewController.h */,
+				1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */,
+				186419081CBC23DB0086A237 /* Edit User */,
+				186419091CBC23E10086A237 /* Change Password */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		186419081CBC23DB0086A237 /* Edit User */ = {
+			isa = PBXGroup;
+			children = (
+				186419011CBC23BC0086A237 /* EditUserTableViewController.h */,
+				186419021CBC23BC0086A237 /* EditUserTableViewController.m */,
+			);
+			name = "Edit User";
+			sourceTree = "<group>";
+		};
+		186419091CBC23E10086A237 /* Change Password */ = {
+			isa = PBXGroup;
+			children = (
+				186419041CBC23C70086A237 /* ChangePasswordTableViewController.h */,
+				186419051CBC23C70086A237 /* ChangePasswordTableViewController.m */,
+			);
+			name = "Change Password";
+			sourceTree = "<group>";
+		};
+		186419131CBC24A20086A237 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				183A51961CBC3BE200B123C3 /* BaseSearchViewController.h */,
+				183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */,
+				186419161CBC24C80086A237 /* Schedule */,
+				186419141CBC24AD0086A237 /* Train Name */,
+				186419151CBC24B60086A237 /* Between Two Stations */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		186419141CBC24AD0086A237 /* Train Name */ = {
+			isa = PBXGroup;
+			children = (
+				1864190A1CBC244C0086A237 /* TrainNameSearchTableViewController.h */,
+				1864190B1CBC244C0086A237 /* TrainNameSearchTableViewController.m */,
+			);
+			name = "Train Name";
+			sourceTree = "<group>";
+		};
+		186419151CBC24B60086A237 /* Between Two Stations */ = {
+			isa = PBXGroup;
+			children = (
+				1864190D1CBC24610086A237 /* BetweenTwoStationsTableViewController.h */,
+				1864190E1CBC24610086A237 /* BetweenTwoStationsTableViewController.m */,
+			);
+			name = "Between Two Stations";
+			sourceTree = "<group>";
+		};
+		186419161CBC24C80086A237 /* Schedule */ = {
+			isa = PBXGroup;
+			children = (
+				186419101CBC247E0086A237 /* ScheduleTableViewController.h */,
+				186419111CBC247E0086A237 /* ScheduleTableViewController.m */,
+			);
+			name = Schedule;
+			sourceTree = "<group>";
+		};
+		1864191A1CBC25A40086A237 /* Book Ticket */ = {
+			isa = PBXGroup;
+			children = (
+				186419171CBC25960086A237 /* BookTicketTableViewController.h */,
+				186419181CBC25960086A237 /* BookTicketTableViewController.m */,
+			);
+			name = "Book Ticket";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1837A7E41CBBD70F00A4BD5E /* SKYRail */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1837A8121CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRail" */;
+			buildPhases = (
+				1837A7E11CBBD70F00A4BD5E /* Sources */,
+				1837A7E21CBBD70F00A4BD5E /* Frameworks */,
+				1837A7E31CBBD70F00A4BD5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SKYRail;
+			productName = SKYRail;
+			productReference = 1837A7E51CBBD70F00A4BD5E /* SKYRail.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1837A7FD1CBBD71000A4BD5E /* SKYRailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1837A8151CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRailTests" */;
+			buildPhases = (
+				1837A7FA1CBBD71000A4BD5E /* Sources */,
+				1837A7FB1CBBD71000A4BD5E /* Frameworks */,
+				1837A7FC1CBBD71000A4BD5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1837A8001CBBD71000A4BD5E /* PBXTargetDependency */,
+			);
+			name = SKYRailTests;
+			productName = SKYRailTests;
+			productReference = 1837A7FE1CBBD71000A4BD5E /* SKYRailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1837A8081CBBD71000A4BD5E /* SKYRailUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1837A8181CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRailUITests" */;
+			buildPhases = (
+				1837A8051CBBD71000A4BD5E /* Sources */,
+				1837A8061CBBD71000A4BD5E /* Frameworks */,
+				1837A8071CBBD71000A4BD5E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1837A80B1CBBD71000A4BD5E /* PBXTargetDependency */,
+			);
+			name = SKYRailUITests;
+			productName = SKYRailUITests;
+			productReference = 1837A8091CBBD71000A4BD5E /* SKYRailUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1837A7DD1CBBD70F00A4BD5E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = YASH;
+				TargetAttributes = {
+					1837A7E41CBBD70F00A4BD5E = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					1837A7FD1CBBD71000A4BD5E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1837A7E41CBBD70F00A4BD5E;
+					};
+					1837A8081CBBD71000A4BD5E = {
+						CreatedOnToolsVersion = 7.3;
+						TestTargetID = 1837A7E41CBBD70F00A4BD5E;
+					};
+				};
+			};
+			buildConfigurationList = 1837A7E01CBBD70F00A4BD5E /* Build configuration list for PBXProject "SKYRail" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1837A7DC1CBBD70F00A4BD5E;
+			productRefGroup = 1837A7E61CBBD70F00A4BD5E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1837A7E41CBBD70F00A4BD5E /* SKYRail */,
+				1837A7FD1CBBD71000A4BD5E /* SKYRailTests */,
+				1837A8081CBBD71000A4BD5E /* SKYRailUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1837A7E31CBBD70F00A4BD5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1837A7F81CBBD70F00A4BD5E /* LaunchScreen.storyboard in Resources */,
+				1837A7F51CBBD70F00A4BD5E /* Assets.xcassets in Resources */,
+				183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */,
+				1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A7FC1CBBD71000A4BD5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A8071CBBD71000A4BD5E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1837A7E11CBBD70F00A4BD5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */,
+				1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */,
+				1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */,
+				186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */,
+				186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */,
+				186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */,
+				1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */,
+				1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */,
+				1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */,
+				186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */,
+				1864190F1CBC24610086A237 /* BetweenTwoStationsTableViewController.m in Sources */,
+				183A51981CBC3BE200B123C3 /* BaseSearchViewController.m in Sources */,
+				186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */,
+				1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A7FA1CBBD71000A4BD5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1837A8031CBBD71000A4BD5E /* SKYRailTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1837A8051CBBD71000A4BD5E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1837A80E1CBBD71000A4BD5E /* SKYRailUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1837A8001CBBD71000A4BD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1837A7E41CBBD70F00A4BD5E /* SKYRail */;
+			targetProxy = 1837A7FF1CBBD71000A4BD5E /* PBXContainerItemProxy */;
+		};
+		1837A80B1CBBD71000A4BD5E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1837A7E41CBBD70F00A4BD5E /* SKYRail */;
+			targetProxy = 1837A80A1CBBD71000A4BD5E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1837A7F11CBBD70F00A4BD5E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1837A7F21CBBD70F00A4BD5E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1837A7F61CBBD70F00A4BD5E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1837A7F71CBBD70F00A4BD5E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1837A8101CBBD71000A4BD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1837A8111CBBD71000A4BD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1837A8131CBBD71000A4BD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SKYRail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1837A8141CBBD71000A4BD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = SKYRail/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRail;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		1837A8161CBBD71000A4BD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SKYRailTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKYRail.app/SKYRail";
+			};
+			name = Debug;
+		};
+		1837A8171CBBD71000A4BD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SKYRailTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRailTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SKYRail.app/SKYRail";
+			};
+			name = Release;
+		};
+		1837A8191CBBD71000A4BD5E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SKYRailUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SKYRail;
+			};
+			name = Debug;
+		};
+		1837A81A1CBBD71000A4BD5E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SKYRailUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRailUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = SKYRail;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1837A7E01CBBD70F00A4BD5E /* Build configuration list for PBXProject "SKYRail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1837A8101CBBD71000A4BD5E /* Debug */,
+				1837A8111CBBD71000A4BD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1837A8121CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRail" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1837A8131CBBD71000A4BD5E /* Debug */,
+				1837A8141CBBD71000A4BD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1837A8151CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1837A8161CBBD71000A4BD5E /* Debug */,
+				1837A8171CBBD71000A4BD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1837A8181CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRailUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1837A8191CBBD71000A4BD5E /* Debug */,
+				1837A81A1CBBD71000A4BD5E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1837A7DD1CBBD70F00A4BD5E /* Project object */;
+}
