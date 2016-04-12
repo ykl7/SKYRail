@@ -1,5 +1,5 @@
 //
-//  BaseSearchViewController.h
+//  PlatformsTableViewController.h
 //  SKYRail
 //
 //  Created by YASH on 12/04/16.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface BaseSearchViewController : UIViewController
+@interface PlatformsTableViewController : UITableViewController
 
 @end

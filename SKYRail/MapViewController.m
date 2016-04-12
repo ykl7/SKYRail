@@ -1,18 +1,18 @@
 //
-//  BaseSearchViewController.m
+//  MapViewController.m
 //  SKYRail
 //
 //  Created by YASH on 12/04/16.
 //  Copyright © 2016 YASH. All rights reserved.
 //
 
-#import "BaseSearchViewController.h"
+#import "MapViewController.h"
 
-@interface BaseSearchViewController ()
+@interface MapViewController ()
 
 @end
 
-@implementation BaseSearchViewController
+@implementation MapViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

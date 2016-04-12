@@ -17,7 +17,6 @@
 		1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8211CBBD9A500A4BD5E /* SignUpTableViewController.m */; };
 		1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */; };
 		1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */; };
-		183A51981CBC3BE200B123C3 /* BaseSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */; };
 		183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 183A51991CBC437A00B123C3 /* launch scr.jpeg */; };
 		186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */; };
 		186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419021CBC23BC0086A237 /* EditUserTableViewController.m */; };
@@ -27,6 +26,10 @@
 		186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419111CBC247E0086A237 /* ScheduleTableViewController.m */; };
 		186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419181CBC25960086A237 /* BookTicketTableViewController.m */; };
 		1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */; };
+		18AF4AB21CBC923D001BA49B /* BaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */; };
+		18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */; };
+		18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB71CBC948D001BA49B /* MapViewController.m */; };
+		18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18AF4AB91CBC95F1001BA49B /* india pol.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,8 +70,6 @@
 		1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		1837A82A1CBBECA300A4BD5E /* BookingHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingHistoryTableViewController.h; sourceTree = "<group>"; };
 		1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingHistoryTableViewController.m; sourceTree = "<group>"; };
-		183A51961CBC3BE200B123C3 /* BaseSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchViewController.h; sourceTree = "<group>"; };
-		183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchViewController.m; sourceTree = "<group>"; };
 		183A51991CBC437A00B123C3 /* launch scr.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launch scr.jpeg"; sourceTree = "<group>"; };
 		186418F91CBC22EE0086A237 /* TicketDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketDetailsTableViewController.h; sourceTree = "<group>"; };
 		186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketDetailsTableViewController.m; sourceTree = "<group>"; };
@@ -86,6 +87,13 @@
 		186419181CBC25960086A237 /* BookTicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTicketTableViewController.m; sourceTree = "<group>"; };
 		1864191B1CBC38070086A237 /* UserDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsTableViewController.h; sourceTree = "<group>"; };
 		1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsTableViewController.m; sourceTree = "<group>"; };
+		18AF4AB01CBC923D001BA49B /* BaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchTableViewController.h; sourceTree = "<group>"; };
+		18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchTableViewController.m; sourceTree = "<group>"; };
+		18AF4AB31CBC9437001BA49B /* PlatformsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformsTableViewController.h; sourceTree = "<group>"; };
+		18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformsTableViewController.m; sourceTree = "<group>"; };
+		18AF4AB61CBC948C001BA49B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		18AF4AB71CBC948D001BA49B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		18AF4AB91CBC95F1001BA49B /* india pol.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "india pol.jpeg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				183A51991CBC437A00B123C3 /* launch scr.jpeg */,
+				18AF4AB91CBC95F1001BA49B /* india pol.jpeg */,
 				1837A7E91CBBD70F00A4BD5E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -228,6 +237,7 @@
 				186419071CBC23D00086A237 /* User */,
 				1837A82D1CBBECAA00A4BD5E /* Booking History */,
 				1837A81C1CBBD72100A4BD5E /* Launch */,
+				18AF4ABB1CBC9610001BA49B /* Travel */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -273,8 +283,8 @@
 		186419131CBC24A20086A237 /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				183A51961CBC3BE200B123C3 /* BaseSearchViewController.h */,
-				183A51971CBC3BE200B123C3 /* BaseSearchViewController.m */,
+				18AF4AB01CBC923D001BA49B /* BaseSearchTableViewController.h */,
+				18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */,
 				186419161CBC24C80086A237 /* Schedule */,
 				186419141CBC24AD0086A237 /* Train Name */,
 				186419151CBC24B60086A237 /* Between Two Stations */,
@@ -316,6 +326,25 @@
 				186419181CBC25960086A237 /* BookTicketTableViewController.m */,
 			);
 			name = "Book Ticket";
+			sourceTree = "<group>";
+		};
+		18AF4ABB1CBC9610001BA49B /* Travel */ = {
+			isa = PBXGroup;
+			children = (
+				18AF4AB61CBC948C001BA49B /* MapViewController.h */,
+				18AF4AB71CBC948D001BA49B /* MapViewController.m */,
+				18AF4ABC1CBC961E001BA49B /* Platform List */,
+			);
+			name = Travel;
+			sourceTree = "<group>";
+		};
+		18AF4ABC1CBC961E001BA49B /* Platform List */ = {
+			isa = PBXGroup;
+			children = (
+				18AF4AB31CBC9437001BA49B /* PlatformsTableViewController.h */,
+				18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */,
+			);
+			name = "Platform List";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +452,7 @@
 			files = (
 				1837A7F81CBBD70F00A4BD5E /* LaunchScreen.storyboard in Resources */,
 				1837A7F51CBBD70F00A4BD5E /* Assets.xcassets in Resources */,
+				18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */,
 				183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */,
 				1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */,
 			);
@@ -449,18 +479,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18AF4AB21CBC923D001BA49B /* BaseSearchTableViewController.m in Sources */,
 				1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */,
 				1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */,
 				1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */,
 				186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */,
+				18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */,
 				186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */,
 				186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */,
 				1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */,
 				1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */,
 				1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */,
+				18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */,
 				186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */,
 				1864190F1CBC24610086A237 /* BetweenTwoStationsTableViewController.m in Sources */,
-				183A51981CBC3BE200B123C3 /* BaseSearchViewController.m in Sources */,
 				186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */,
 				1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */,
 			);
