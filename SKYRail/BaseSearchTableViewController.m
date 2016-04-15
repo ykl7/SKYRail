@@ -36,6 +36,29 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField becomeFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.boardingTextField)
+        [self.boardingTextField becomeFirstResponder];
+    if (textField == self.alightingTextField)
+        [self.alightingTextField becomeFirstResponder];
+    if (textField == self.trainNameTextField)
+        [self.trainNameTextField becomeFirstResponder];
+    return YES;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.boardingTextField resignFirstResponder];
+    [self.alightingTextField resignFirstResponder];
+    [self.trainNameTextField resignFirstResponder];
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

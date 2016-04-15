@@ -36,6 +36,34 @@
     return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField becomeFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.oldPasswordTF)
+        [self.oldPasswordTF becomeFirstResponder];
+    if (textField == self.changedPasswordTF)
+        [self.changedPasswordTF becomeFirstResponder];
+    if (textField == self.confirmPasswordTF)
+        [self.confirmPasswordTF becomeFirstResponder];
+    return YES;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.oldPasswordTF resignFirstResponder];
+    [self.changedPasswordTF resignFirstResponder];
+    [self.confirmPasswordTF resignFirstResponder];
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

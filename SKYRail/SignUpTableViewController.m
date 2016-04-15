@@ -7,6 +7,7 @@
 //
 
 #import "SignUpTableViewController.h"
+#import "User.h"
 
 @interface SignUpTableViewController ()
 
@@ -50,6 +51,7 @@
             else
             {
                 // enter user details into a table here
+                
                 UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarVC"];
                 [tabBarVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
                 [self presentViewController:tabBarVC animated:YES completion:nil];
@@ -95,6 +97,35 @@
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section
 {
     return [[UIView alloc] initWithFrame:CGRectZero];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField becomeFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.nameTextField)
+        [self.nameTextField becomeFirstResponder];
+    if (textField == self.mobileNumberTextField)
+        [self.mobileNumberTextField becomeFirstResponder];
+    if (textField == self.passwordTextField)
+        [self.passwordTextField becomeFirstResponder];
+    if (textField == self.genderTextField)
+        [self.genderTextField becomeFirstResponder];
+    if (textField == self.emailTextField)
+        [self.emailTextField becomeFirstResponder];
+    return YES;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.nameTextField resignFirstResponder];
+    [self.passwordTextField resignFirstResponder];
+    [self.mobileNumberTextField resignFirstResponder];
+    [self.genderTextField resignFirstResponder];
+    [self.emailTextField resignFirstResponder];
 }
 
 /*

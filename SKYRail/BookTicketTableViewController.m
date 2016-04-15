@@ -36,6 +36,37 @@
     return [[UIView alloc] initWithFrame:CGRectZero];
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [textField becomeFirstResponder];
+}
+
+- (BOOL) textFieldShouldReturn:(UITextField *)textField
+{
+    if (textField == self.boardingStationTextField)
+        [self.boardingStationTextField becomeFirstResponder];
+    if (textField == self.alightingStationTextField)
+        [self.alightingStationTextField becomeFirstResponder];
+    if (textField == self.dateOfJourneryTextField)
+        [self.dateOfJourneryTextField becomeFirstResponder];
+    if (textField == self.numberOfSeatsTextField)
+        [self.numberOfSeatsTextField becomeFirstResponder];
+    return YES;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [self.numberOfSeatsTextField resignFirstResponder];
+    [self.boardingStationTextField resignFirstResponder];
+    [self.alightingStationTextField resignFirstResponder];
+    [self.dateOfJourneryTextField resignFirstResponder];
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];

@@ -7,8 +7,12 @@
 //
 
 #import "UserDetailsTableViewController.h"
+#import "User.h"
 
 @interface UserDetailsTableViewController ()
+{
+    User *thisUser;
+}
 
 @end
 
@@ -22,6 +26,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    thisUser = [User currentUser];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,8 +45,14 @@
 
 - (IBAction)logOutAction:(id)sender
 {
+    [User clearUser];
     UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"signUpNavVC"];
     [self presentViewController:navVC animated:YES completion:nil];
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

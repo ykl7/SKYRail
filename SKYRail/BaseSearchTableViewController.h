@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface BaseSearchTableViewController : UITableViewController
+@property (strong, nonatomic) IBOutlet UITextField *trainNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *boardingTextField;
+@property (strong, nonatomic) IBOutlet UITextField *alightingTextField;
 
 @end

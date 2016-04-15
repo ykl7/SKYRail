@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		182795AB1CC18E7600CDEEA5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 182795AA1CC18E7600CDEEA5 /* User.m */; };
+		18362D161CBF935100511DDC /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18362D151CBF935100511DDC /* LaunchViewController.m */; };
+		18362D191CBF9D7E00511DDC /* KnowMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18362D181CBF9D7E00511DDC /* KnowMoreViewController.m */; };
 		1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A7E91CBBD70F00A4BD5E /* main.m */; };
 		1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A7EC1CBBD70F00A4BD5E /* AppDelegate.m */; };
 		1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1837A7F11CBBD70F00A4BD5E /* Main.storyboard */; };
@@ -30,6 +33,7 @@
 		18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */; };
 		18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB71CBC948D001BA49B /* MapViewController.m */; };
 		18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18AF4AB91CBC95F1001BA49B /* india pol.jpeg */; };
+		DFA513F4D1C51532737A5B5A /* libPods-SKYRail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		182795A91CC18E7600CDEEA5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		182795AA1CC18E7600CDEEA5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		18362D141CBF935100511DDC /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		18362D151CBF935100511DDC /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		18362D171CBF9D7E00511DDC /* KnowMoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KnowMoreViewController.h; sourceTree = "<group>"; };
+		18362D181CBF9D7E00511DDC /* KnowMoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KnowMoreViewController.m; sourceTree = "<group>"; };
 		1837A7E51CBBD70F00A4BD5E /* SKYRail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SKYRail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1837A7E91CBBD70F00A4BD5E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1837A7EB1CBBD70F00A4BD5E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +104,9 @@
 		18AF4AB61CBC948C001BA49B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		18AF4AB71CBC948D001BA49B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		18AF4AB91CBC95F1001BA49B /* india pol.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "india pol.jpeg"; sourceTree = "<group>"; };
+		43E27A4A3EF48B1099F0F816 /* Pods-SKYRail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYRail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKYRail/Pods-SKYRail.debug.xcconfig"; sourceTree = "<group>"; };
+		C3691D3184B1EC04A3718A74 /* Pods-SKYRail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYRail.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKYRail/Pods-SKYRail.release.xcconfig"; sourceTree = "<group>"; };
+		F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKYRail.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +114,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFA513F4D1C51532737A5B5A /* libPods-SKYRail.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +135,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E8E527C2B32C3870B69CE1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18362D1A1CBF9D8800511DDC /* Know More */ = {
+			isa = PBXGroup;
+			children = (
+				18362D171CBF9D7E00511DDC /* KnowMoreViewController.h */,
+				18362D181CBF9D7E00511DDC /* KnowMoreViewController.m */,
+			);
+			name = "Know More";
+			sourceTree = "<group>";
+		};
 		1837A7DC1CBBD70F00A4BD5E = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +159,8 @@
 				1837A8011CBBD71000A4BD5E /* SKYRailTests */,
 				1837A80C1CBBD71000A4BD5E /* SKYRailUITests */,
 				1837A7E61CBBD70F00A4BD5E /* Products */,
+				AACB5DA01ACC0CDF12B541B9 /* Pods */,
+				0E8E527C2B32C3870B69CE1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -145,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				1837A81B1CBBD71900A4BD5E /* App Delegate */,
+				18AEF76F1CC192A2005C3DD5 /* Models */,
 				183A519B1CBC455600B123C3 /* Controllers */,
 				1837A7F11CBBD70F00A4BD5E /* Main.storyboard */,
 				1837A7F41CBBD70F00A4BD5E /* Assets.xcassets */,
@@ -195,6 +229,8 @@
 		1837A81C1CBBD72100A4BD5E /* Launch */ = {
 			isa = PBXGroup;
 			children = (
+				18362D141CBF935100511DDC /* LaunchViewController.h */,
+				18362D151CBF935100511DDC /* LaunchViewController.m */,
 				1837A8261CBBE24100A4BD5E /* Sign Up */,
 				1837A8271CBBE24700A4BD5E /* Log In */,
 			);
@@ -328,6 +364,23 @@
 			name = "Book Ticket";
 			sourceTree = "<group>";
 		};
+		18AEF76E1CC1929D005C3DD5 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				182795A91CC18E7600CDEEA5 /* User.h */,
+				182795AA1CC18E7600CDEEA5 /* User.m */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		18AEF76F1CC192A2005C3DD5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18AEF76E1CC1929D005C3DD5 /* User */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		18AF4ABB1CBC9610001BA49B /* Travel */ = {
 			isa = PBXGroup;
 			children = (
@@ -343,8 +396,18 @@
 			children = (
 				18AF4AB31CBC9437001BA49B /* PlatformsTableViewController.h */,
 				18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */,
+				18362D1A1CBF9D8800511DDC /* Know More */,
 			);
 			name = "Platform List";
+			sourceTree = "<group>";
+		};
+		AACB5DA01ACC0CDF12B541B9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				43E27A4A3EF48B1099F0F816 /* Pods-SKYRail.debug.xcconfig */,
+				C3691D3184B1EC04A3718A74 /* Pods-SKYRail.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,9 +417,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1837A8121CBBD71000A4BD5E /* Build configuration list for PBXNativeTarget "SKYRail" */;
 			buildPhases = (
+				BBC35EC9E2898FFF39115DC4 /* Check Pods Manifest.lock */,
 				1837A7E11CBBD70F00A4BD5E /* Sources */,
 				1837A7E21CBBD70F00A4BD5E /* Frameworks */,
 				1837A7E31CBBD70F00A4BD5E /* Resources */,
+				F040D2423DE6640C9616CA4B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -474,6 +539,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		BBC35EC9E2898FFF39115DC4 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F040D2423DE6640C9616CA4B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SKYRail/Pods-SKYRail-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		1837A7E11CBBD70F00A4BD5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -484,14 +582,17 @@
 				1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */,
 				1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */,
 				186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */,
+				18362D161CBF935100511DDC /* LaunchViewController.m in Sources */,
 				18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */,
 				186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */,
 				186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */,
 				1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */,
 				1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */,
 				1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */,
+				18362D191CBF9D7E00511DDC /* KnowMoreViewController.m in Sources */,
 				18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */,
 				186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */,
+				182795AB1CC18E7600CDEEA5 /* User.m in Sources */,
 				1864190F1CBC24610086A237 /* BetweenTwoStationsTableViewController.m in Sources */,
 				186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */,
 				1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */,
@@ -633,6 +734,7 @@
 		};
 		1837A8131CBBD71000A4BD5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 43E27A4A3EF48B1099F0F816 /* Pods-SKYRail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SKYRail/Info.plist;
@@ -645,6 +747,7 @@
 		};
 		1837A8141CBBD71000A4BD5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3691D3184B1EC04A3718A74 /* Pods-SKYRail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SKYRail/Info.plist;
