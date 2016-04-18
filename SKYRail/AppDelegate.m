@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import <FMDB/FMDatabase.h>
+#import <FMDB/FMDatabaseQueue.h>
+#import "DBManager.h"
 
 @interface AppDelegate ()
 
@@ -17,7 +20,25 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    NSString *bundledFilePath = [[NSBundle mainBundle] pathForResource:@"SKYRailDB.db" ofType:nil];
+    NSString *filePath = [self documentsPathForFileName:@"SKYRailDB.db"];
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[self documentsPathForFileName:@"SKYRailDB.db"]]) {
+        NSLog(@"Copying bundled file to documents.");
+        [[NSFileManager defaultManager] copyItemAtPath:bundledFilePath toPath:filePath error:nil];
+    }
+    
+    [[DBManager sharedManager] dbManagerOpenDatabaseWithPath:filePath];
+    
     return YES;
+}
+
+- (NSString *)documentsPathForFileName:(NSString *)name
+{
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsPath = [NSString stringWithFormat:@"%@", [paths lastObject]];
+    return [documentsPath stringByAppendingPathComponent:[NSString stringWithFormat:@"%@", name]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

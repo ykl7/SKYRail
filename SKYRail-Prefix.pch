@@ -1,0 +1,38 @@
+//
+//  SKYRail-Prefix.pch
+//  SKYRail
+//
+//  Created by YASH on 19/04/16.
+//  Copyright © 2016 YASH. All rights reserved.
+//
+
+#ifndef SKYRail_Prefix_pch
+#define SKYRail_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import <FMDB/FMDatabase.h>
+#import <FMDB/FMDatabaseQueue.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+
+#import "DBManager.h"
+
+#import "User.h"
+#import "Person.h"
+#import "Train.h"
+#import "Tickets.h"
+#import "Platform.h"
+#import "Pricing.h"
+#import "Visits.h"
+#import "BookingHistory.h"
+#import "CancelledTickets.h"
+
+#define SVHUD_SHOW dispatch_async(dispatch_get_main_queue(),^{[SVProgressHUD showWithStatus:@"Loading..."];});
+#define SVHUD_HIDE dispatch_async(dispatch_get_main_queue(),^{[SVProgressHUD dismiss];});
+
+#define SVHUD_FAILURE(message) dispatch_async(dispatch_get_main_queue(), ^{ [SVProgressHUD showErrorWithStatus:message]; });
+#define SVHUD_SUCCESS(message) dispatch_async(dispatch_get_main_queue(), ^{ [SVProgressHUD showSuccessWithStatus:message]; });
+
+#endif /* SKYRail_Prefix_pch */

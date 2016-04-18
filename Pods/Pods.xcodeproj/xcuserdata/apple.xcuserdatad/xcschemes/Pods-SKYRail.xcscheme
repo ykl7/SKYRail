@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "07C95E4C27BFF2AED2555EAE"
+               BlueprintIdentifier = "55D63FA5EACB2F1EF0BD873E"
                BuildableName = "libPods-SKYRail.a"
                BlueprintName = "Pods-SKYRail"
                ReferencedContainer = "container:Pods.xcodeproj">

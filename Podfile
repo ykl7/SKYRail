@@ -6,6 +6,8 @@
 target 'SKYRail' do
 pod 'RMMapper'
 pod 'FMDB'
+pod 'SVProgressHUD'
+pod 'DZNEmptyDataSet'
 end
 
 target 'SKYRailTests' do

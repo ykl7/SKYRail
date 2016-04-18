@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18124C7F1CC58BF8008246F6 /* IMG_1981.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18124C7E1CC58BF8008246F6 /* IMG_1981.jpg */; };
+		18124C821CC58C99008246F6 /* EasterEggViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18124C811CC58C99008246F6 /* EasterEggViewController.m */; };
 		182795AB1CC18E7600CDEEA5 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 182795AA1CC18E7600CDEEA5 /* User.m */; };
 		18362D161CBF935100511DDC /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18362D151CBF935100511DDC /* LaunchViewController.m */; };
 		18362D191CBF9D7E00511DDC /* KnowMoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18362D181CBF9D7E00511DDC /* KnowMoreViewController.m */; };
@@ -33,6 +35,18 @@
 		18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */; };
 		18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB71CBC948D001BA49B /* MapViewController.m */; };
 		18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18AF4AB91CBC95F1001BA49B /* india pol.jpeg */; };
+		18DD32F71CC555C300448A97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD32F61CC555C300448A97 /* DBManager.m */; };
+		18FED7D61CC56C18006B815D /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7D51CC56C18006B815D /* Train.m */; };
+		18FED7DA1CC56C41006B815D /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7D91CC56C41006B815D /* Platform.m */; };
+		18FED7DE1CC56CDD006B815D /* Pricing.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7DD1CC56CDD006B815D /* Pricing.m */; };
+		18FED7E11CC56CE3006B815D /* Tickets.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7E01CC56CE3006B815D /* Tickets.m */; };
+		18FED7E41CC56CEA006B815D /* Visits.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7E31CC56CEA006B815D /* Visits.m */; };
+		18FED7E71CC56CF3006B815D /* BookingHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7E61CC56CF3006B815D /* BookingHistory.m */; };
+		18FED7EE1CC56D79006B815D /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7ED1CC56D79006B815D /* Person.m */; };
+		18FED7F21CC57E20006B815D /* CancelledTickets.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7F11CC57E20006B815D /* CancelledTickets.m */; };
+		18FED7F61CC57F50006B815D /* SKYRailDB.db in Resources */ = {isa = PBXBuildFile; fileRef = 18FED7F51CC57F50006B815D /* SKYRailDB.db */; };
+		18FED7F91CC5827A006B815D /* QuerySetupTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7F81CC5827A006B815D /* QuerySetupTableViewController.m */; };
+		18FED7FC1CC5832E006B815D /* QueryResultsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7FB1CC5832E006B815D /* QueryResultsTableViewController.m */; };
 		DFA513F4D1C51532737A5B5A /* libPods-SKYRail.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +68,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		18124C7E1CC58BF8008246F6 /* IMG_1981.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1981.jpg; sourceTree = "<group>"; };
+		18124C801CC58C99008246F6 /* EasterEggViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EasterEggViewController.h; sourceTree = "<group>"; };
+		18124C811CC58C99008246F6 /* EasterEggViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EasterEggViewController.m; sourceTree = "<group>"; };
 		182795A91CC18E7600CDEEA5 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		182795AA1CC18E7600CDEEA5 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		18362D141CBF935100511DDC /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
@@ -104,6 +121,30 @@
 		18AF4AB61CBC948C001BA49B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		18AF4AB71CBC948D001BA49B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		18AF4AB91CBC95F1001BA49B /* india pol.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "india pol.jpeg"; sourceTree = "<group>"; };
+		18DD32F51CC555C300448A97 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
+		18DD32F61CC555C300448A97 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
+		18DD32FB1CC5654C00448A97 /* SKYRail-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKYRail-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		18FED7D41CC56C18006B815D /* Train.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
+		18FED7D51CC56C18006B815D /* Train.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
+		18FED7D81CC56C41006B815D /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
+		18FED7D91CC56C41006B815D /* Platform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Platform.m; sourceTree = "<group>"; };
+		18FED7DC1CC56CDD006B815D /* Pricing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pricing.h; sourceTree = "<group>"; };
+		18FED7DD1CC56CDD006B815D /* Pricing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pricing.m; sourceTree = "<group>"; };
+		18FED7DF1CC56CE3006B815D /* Tickets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tickets.h; sourceTree = "<group>"; };
+		18FED7E01CC56CE3006B815D /* Tickets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tickets.m; sourceTree = "<group>"; };
+		18FED7E21CC56CEA006B815D /* Visits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Visits.h; sourceTree = "<group>"; };
+		18FED7E31CC56CEA006B815D /* Visits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Visits.m; sourceTree = "<group>"; };
+		18FED7E51CC56CF3006B815D /* BookingHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingHistory.h; sourceTree = "<group>"; };
+		18FED7E61CC56CF3006B815D /* BookingHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingHistory.m; sourceTree = "<group>"; };
+		18FED7EC1CC56D79006B815D /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		18FED7ED1CC56D79006B815D /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		18FED7F01CC57E20006B815D /* CancelledTickets.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelledTickets.h; sourceTree = "<group>"; };
+		18FED7F11CC57E20006B815D /* CancelledTickets.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelledTickets.m; sourceTree = "<group>"; };
+		18FED7F51CC57F50006B815D /* SKYRailDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = SKYRailDB.db; sourceTree = "<group>"; };
+		18FED7F71CC5827A006B815D /* QuerySetupTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuerySetupTableViewController.h; sourceTree = "<group>"; };
+		18FED7F81CC5827A006B815D /* QuerySetupTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuerySetupTableViewController.m; sourceTree = "<group>"; };
+		18FED7FA1CC5832E006B815D /* QueryResultsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QueryResultsTableViewController.h; sourceTree = "<group>"; };
+		18FED7FB1CC5832E006B815D /* QueryResultsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QueryResultsTableViewController.m; sourceTree = "<group>"; };
 		43E27A4A3EF48B1099F0F816 /* Pods-SKYRail.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYRail.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SKYRail/Pods-SKYRail.debug.xcconfig"; sourceTree = "<group>"; };
 		C3691D3184B1EC04A3718A74 /* Pods-SKYRail.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SKYRail.release.xcconfig"; path = "Pods/Target Support Files/Pods-SKYRail/Pods-SKYRail.release.xcconfig"; sourceTree = "<group>"; };
 		F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SKYRail.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +182,15 @@
 				F057F7D9F7D5A2DD9B18CDA6 /* libPods-SKYRail.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		18124C831CC58CA2008246F6 /* Easter Egg */ = {
+			isa = PBXGroup;
+			children = (
+				18124C801CC58C99008246F6 /* EasterEggViewController.h */,
+				18124C811CC58C99008246F6 /* EasterEggViewController.m */,
+			);
+			name = "Easter Egg";
 			sourceTree = "<group>";
 		};
 		18362D1A1CBF9D8800511DDC /* Know More */ = {
@@ -192,6 +242,9 @@
 		1837A7E81CBBD70F00A4BD5E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18124C7E1CC58BF8008246F6 /* IMG_1981.jpg */,
+				18FED7F51CC57F50006B815D /* SKYRailDB.db */,
+				18DD32FB1CC5654C00448A97 /* SKYRail-Prefix.pch */,
 				183A51991CBC437A00B123C3 /* launch scr.jpeg */,
 				18AF4AB91CBC95F1001BA49B /* india pol.jpeg */,
 				1837A7E91CBBD70F00A4BD5E /* main.m */,
@@ -274,6 +327,8 @@
 				1837A82D1CBBECAA00A4BD5E /* Booking History */,
 				1837A81C1CBBD72100A4BD5E /* Launch */,
 				18AF4ABB1CBC9610001BA49B /* Travel */,
+				18FED7FF1CC58352006B815D /* Query System */,
+				18124C831CC58CA2008246F6 /* Easter Egg */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -376,7 +431,16 @@
 		18AEF76F1CC192A2005C3DD5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				18DD32FA1CC55B8C00448A97 /* DBManager */,
 				18AEF76E1CC1929D005C3DD5 /* User */,
+				18FED7EF1CC56D80006B815D /* Person */,
+				18FED7D71CC56C33006B815D /* Train */,
+				18FED7DB1CC56C47006B815D /* Platform */,
+				18FED7E81CC56CF7006B815D /* Pricing */,
+				18FED7E91CC56CFD006B815D /* Tickets */,
+				18FED7EA1CC56D03006B815D /* Visits */,
+				18FED7EB1CC56D09006B815D /* Booking History */,
+				18FED7F31CC57E27006B815D /* Cancelled Tickets */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -399,6 +463,114 @@
 				18362D1A1CBF9D8800511DDC /* Know More */,
 			);
 			name = "Platform List";
+			sourceTree = "<group>";
+		};
+		18DD32FA1CC55B8C00448A97 /* DBManager */ = {
+			isa = PBXGroup;
+			children = (
+				18DD32F51CC555C300448A97 /* DBManager.h */,
+				18DD32F61CC555C300448A97 /* DBManager.m */,
+			);
+			name = DBManager;
+			sourceTree = "<group>";
+		};
+		18FED7D71CC56C33006B815D /* Train */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7D41CC56C18006B815D /* Train.h */,
+				18FED7D51CC56C18006B815D /* Train.m */,
+			);
+			name = Train;
+			sourceTree = "<group>";
+		};
+		18FED7DB1CC56C47006B815D /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7D81CC56C41006B815D /* Platform.h */,
+				18FED7D91CC56C41006B815D /* Platform.m */,
+			);
+			name = Platform;
+			sourceTree = "<group>";
+		};
+		18FED7E81CC56CF7006B815D /* Pricing */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7DC1CC56CDD006B815D /* Pricing.h */,
+				18FED7DD1CC56CDD006B815D /* Pricing.m */,
+			);
+			name = Pricing;
+			sourceTree = "<group>";
+		};
+		18FED7E91CC56CFD006B815D /* Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7DF1CC56CE3006B815D /* Tickets.h */,
+				18FED7E01CC56CE3006B815D /* Tickets.m */,
+			);
+			name = Tickets;
+			sourceTree = "<group>";
+		};
+		18FED7EA1CC56D03006B815D /* Visits */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7E21CC56CEA006B815D /* Visits.h */,
+				18FED7E31CC56CEA006B815D /* Visits.m */,
+			);
+			name = Visits;
+			sourceTree = "<group>";
+		};
+		18FED7EB1CC56D09006B815D /* Booking History */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7E51CC56CF3006B815D /* BookingHistory.h */,
+				18FED7E61CC56CF3006B815D /* BookingHistory.m */,
+			);
+			name = "Booking History";
+			sourceTree = "<group>";
+		};
+		18FED7EF1CC56D80006B815D /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7EC1CC56D79006B815D /* Person.h */,
+				18FED7ED1CC56D79006B815D /* Person.m */,
+			);
+			name = Person;
+			sourceTree = "<group>";
+		};
+		18FED7F31CC57E27006B815D /* Cancelled Tickets */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7F01CC57E20006B815D /* CancelledTickets.h */,
+				18FED7F11CC57E20006B815D /* CancelledTickets.m */,
+			);
+			name = "Cancelled Tickets";
+			sourceTree = "<group>";
+		};
+		18FED7FD1CC58341006B815D /* Setup Query */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7F71CC5827A006B815D /* QuerySetupTableViewController.h */,
+				18FED7F81CC5827A006B815D /* QuerySetupTableViewController.m */,
+			);
+			name = "Setup Query";
+			sourceTree = "<group>";
+		};
+		18FED7FE1CC5834A006B815D /* Query Results */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7FA1CC5832E006B815D /* QueryResultsTableViewController.h */,
+				18FED7FB1CC5832E006B815D /* QueryResultsTableViewController.m */,
+			);
+			name = "Query Results";
+			sourceTree = "<group>";
+		};
+		18FED7FF1CC58352006B815D /* Query System */ = {
+			isa = PBXGroup;
+			children = (
+				18FED7FD1CC58341006B815D /* Setup Query */,
+				18FED7FE1CC5834A006B815D /* Query Results */,
+			);
+			name = "Query System";
 			sourceTree = "<group>";
 		};
 		AACB5DA01ACC0CDF12B541B9 /* Pods */ = {
@@ -518,6 +690,8 @@
 				1837A7F81CBBD70F00A4BD5E /* LaunchScreen.storyboard in Resources */,
 				1837A7F51CBBD70F00A4BD5E /* Assets.xcassets in Resources */,
 				18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */,
+				18FED7F61CC57F50006B815D /* SKYRailDB.db in Resources */,
+				18124C7F1CC58BF8008246F6 /* IMG_1981.jpg in Resources */,
 				183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */,
 				1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */,
 			);
@@ -579,10 +753,17 @@
 			files = (
 				18AF4AB21CBC923D001BA49B /* BaseSearchTableViewController.m in Sources */,
 				1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */,
+				18FED7DE1CC56CDD006B815D /* Pricing.m in Sources */,
+				18FED7F21CC57E20006B815D /* CancelledTickets.m in Sources */,
+				18FED7E11CC56CE3006B815D /* Tickets.m in Sources */,
 				1837A7ED1CBBD70F00A4BD5E /* AppDelegate.m in Sources */,
 				1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */,
+				18FED7EE1CC56D79006B815D /* Person.m in Sources */,
+				18FED7E71CC56CF3006B815D /* BookingHistory.m in Sources */,
+				18FED7DA1CC56C41006B815D /* Platform.m in Sources */,
 				186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */,
 				18362D161CBF935100511DDC /* LaunchViewController.m in Sources */,
+				18FED7F91CC5827A006B815D /* QuerySetupTableViewController.m in Sources */,
 				18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */,
 				186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */,
 				186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */,
@@ -591,11 +772,16 @@
 				1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */,
 				18362D191CBF9D7E00511DDC /* KnowMoreViewController.m in Sources */,
 				18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */,
+				18FED7E41CC56CEA006B815D /* Visits.m in Sources */,
 				186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */,
 				182795AB1CC18E7600CDEEA5 /* User.m in Sources */,
+				18124C821CC58C99008246F6 /* EasterEggViewController.m in Sources */,
 				1864190F1CBC24610086A237 /* BetweenTwoStationsTableViewController.m in Sources */,
+				18FED7FC1CC5832E006B815D /* QueryResultsTableViewController.m in Sources */,
 				186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */,
+				18FED7D61CC56C18006B815D /* Train.m in Sources */,
 				1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */,
+				18DD32F71CC555C300448A97 /* DBManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -737,8 +923,10 @@
 			baseConfigurationReference = 43E27A4A3EF48B1099F0F816 /* Pods-SKYRail.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKYRail-Prefix.pch";
 				INFOPLIST_FILE = SKYRail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRail;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -750,8 +938,10 @@
 			baseConfigurationReference = C3691D3184B1EC04A3718A74 /* Pods-SKYRail.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SKYRail-Prefix.pch";
 				INFOPLIST_FILE = SKYRail/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ykl7.SKYRail;
 				PRODUCT_NAME = "$(TARGET_NAME)";

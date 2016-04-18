@@ -55,6 +55,19 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void) motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event
+{
+    
+    if (motion == UIEventSubtypeMotionShake)
+    {
+        
+        UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"easterEggNavVC"];
+        [self presentViewController:navVC animated:YES completion:nil];
+        
+    }
+    
+}
+
 /*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
