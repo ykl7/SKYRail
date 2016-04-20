@@ -34,8 +34,30 @@
 		18AF4AB21CBC923D001BA49B /* BaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */; };
 		18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */; };
 		18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB71CBC948D001BA49B /* MapViewController.m */; };
-		18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18AF4AB91CBC95F1001BA49B /* india pol.jpeg */; };
 		18DD32F71CC555C300448A97 /* DBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18DD32F61CC555C300448A97 /* DBManager.m */; };
+		18EDB4101CC82CD0006D85A8 /* Platforms.json in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB40F1CC82CD0006D85A8 /* Platforms.json */; };
+		18EDB4531CC83589006D85A8 /* Jaipur Terminal.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB43E1CC83589006D85A8 /* Jaipur Terminal.jpeg */; };
+		18EDB4541CC83589006D85A8 /* Ahmedabad Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB43F1CC83589006D85A8 /* Ahmedabad Junction.jpeg */; };
+		18EDB4551CC83589006D85A8 /* Amritsar Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4401CC83589006D85A8 /* Amritsar Junction.jpeg */; };
+		18EDB4561CC83589006D85A8 /* Udupi Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4411CC83589006D85A8 /* Udupi Junction.jpeg */; };
+		18EDB4571CC83589006D85A8 /* Tatanagar Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4421CC83589006D85A8 /* Tatanagar Junction.jpeg */; };
+		18EDB4581CC83589006D85A8 /* Guwahati Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4431CC83589006D85A8 /* Guwahati Junction.jpeg */; };
+		18EDB4591CC83589006D85A8 /* Mumbai CST.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4441CC83589006D85A8 /* Mumbai CST.jpeg */; };
+		18EDB45A1CC83589006D85A8 /* Bangalore Yeshwanthapuram.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4451CC83589006D85A8 /* Bangalore Yeshwanthapuram.jpeg */; };
+		18EDB45B1CC83589006D85A8 /* Mangalore Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4461CC83589006D85A8 /* Mangalore Junction.jpeg */; };
+		18EDB45C1CC83589006D85A8 /* Chennai Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4471CC83589006D85A8 /* Chennai Junction.jpeg */; };
+		18EDB45D1CC83589006D85A8 /* Patna Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4481CC83589006D85A8 /* Patna Junction.jpeg */; };
+		18EDB45E1CC83589006D85A8 /* Thiruvananthpuram Station.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4491CC83589006D85A8 /* Thiruvananthpuram Station.jpeg */; };
+		18EDB45F1CC83589006D85A8 /* Lucknow Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44A1CC83589006D85A8 /* Lucknow Junction.jpeg */; };
+		18EDB4601CC83589006D85A8 /* New Delhi Station.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44B1CC83589006D85A8 /* New Delhi Station.jpeg */; };
+		18EDB4611CC83589006D85A8 /* Howrah Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44C1CC83589006D85A8 /* Howrah Junction.jpeg */; };
+		18EDB4621CC83589006D85A8 /* Mysore Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44D1CC83589006D85A8 /* Mysore Junction.jpeg */; };
+		18EDB4631CC83589006D85A8 /* Chandigarh Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44E1CC83589006D85A8 /* Chandigarh Junction.jpeg */; };
+		18EDB4641CC83589006D85A8 /* Kanpur Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB44F1CC83589006D85A8 /* Kanpur Junction.jpeg */; };
+		18EDB4651CC83589006D85A8 /* Pune Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4501CC83589006D85A8 /* Pune Junction.jpeg */; };
+		18EDB4661CC83589006D85A8 /* Tiruchirapalli Terminal.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4511CC83589006D85A8 /* Tiruchirapalli Terminal.jpeg */; };
+		18EDB4671CC83589006D85A8 /* Bhopal Junction.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4521CC83589006D85A8 /* Bhopal Junction.jpeg */; };
+		18EDB4691CC83614006D85A8 /* india pol.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 18EDB4681CC83614006D85A8 /* india pol.jpeg */; };
 		18FED7D61CC56C18006B815D /* Train.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7D51CC56C18006B815D /* Train.m */; };
 		18FED7DA1CC56C41006B815D /* Platform.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7D91CC56C41006B815D /* Platform.m */; };
 		18FED7DE1CC56CDD006B815D /* Pricing.m in Sources */ = {isa = PBXBuildFile; fileRef = 18FED7DD1CC56CDD006B815D /* Pricing.m */; };
@@ -120,10 +142,32 @@
 		18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlatformsTableViewController.m; sourceTree = "<group>"; };
 		18AF4AB61CBC948C001BA49B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		18AF4AB71CBC948D001BA49B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
-		18AF4AB91CBC95F1001BA49B /* india pol.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "india pol.jpeg"; sourceTree = "<group>"; };
 		18DD32F51CC555C300448A97 /* DBManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBManager.h; sourceTree = "<group>"; };
 		18DD32F61CC555C300448A97 /* DBManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBManager.m; sourceTree = "<group>"; };
 		18DD32FB1CC5654C00448A97 /* SKYRail-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SKYRail-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		18EDB40F1CC82CD0006D85A8 /* Platforms.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Platforms.json; sourceTree = "<group>"; };
+		18EDB43E1CC83589006D85A8 /* Jaipur Terminal.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Jaipur Terminal.jpeg"; sourceTree = "<group>"; };
+		18EDB43F1CC83589006D85A8 /* Ahmedabad Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Ahmedabad Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4401CC83589006D85A8 /* Amritsar Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Amritsar Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4411CC83589006D85A8 /* Udupi Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Udupi Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4421CC83589006D85A8 /* Tatanagar Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tatanagar Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4431CC83589006D85A8 /* Guwahati Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Guwahati Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4441CC83589006D85A8 /* Mumbai CST.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mumbai CST.jpeg"; sourceTree = "<group>"; };
+		18EDB4451CC83589006D85A8 /* Bangalore Yeshwanthapuram.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bangalore Yeshwanthapuram.jpeg"; sourceTree = "<group>"; };
+		18EDB4461CC83589006D85A8 /* Mangalore Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mangalore Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4471CC83589006D85A8 /* Chennai Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chennai Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4481CC83589006D85A8 /* Patna Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Patna Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4491CC83589006D85A8 /* Thiruvananthpuram Station.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Thiruvananthpuram Station.jpeg"; sourceTree = "<group>"; };
+		18EDB44A1CC83589006D85A8 /* Lucknow Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Lucknow Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB44B1CC83589006D85A8 /* New Delhi Station.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "New Delhi Station.jpeg"; sourceTree = "<group>"; };
+		18EDB44C1CC83589006D85A8 /* Howrah Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Howrah Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB44D1CC83589006D85A8 /* Mysore Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Mysore Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB44E1CC83589006D85A8 /* Chandigarh Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Chandigarh Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB44F1CC83589006D85A8 /* Kanpur Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Kanpur Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4501CC83589006D85A8 /* Pune Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Pune Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4511CC83589006D85A8 /* Tiruchirapalli Terminal.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Tiruchirapalli Terminal.jpeg"; sourceTree = "<group>"; };
+		18EDB4521CC83589006D85A8 /* Bhopal Junction.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Bhopal Junction.jpeg"; sourceTree = "<group>"; };
+		18EDB4681CC83614006D85A8 /* india pol.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "india pol.jpeg"; sourceTree = "<group>"; };
 		18FED7D41CC56C18006B815D /* Train.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Train.h; sourceTree = "<group>"; };
 		18FED7D51CC56C18006B815D /* Train.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Train.m; sourceTree = "<group>"; };
 		18FED7D81CC56C41006B815D /* Platform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Platform.h; sourceTree = "<group>"; };
@@ -242,11 +286,13 @@
 		1837A7E81CBBD70F00A4BD5E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				18EDB43D1CC83450006D85A8 /* Platform Images */,
+				18EDB40F1CC82CD0006D85A8 /* Platforms.json */,
 				18124C7E1CC58BF8008246F6 /* IMG_1981.jpg */,
+				18EDB4681CC83614006D85A8 /* india pol.jpeg */,
 				18FED7F51CC57F50006B815D /* SKYRailDB.db */,
 				18DD32FB1CC5654C00448A97 /* SKYRail-Prefix.pch */,
 				183A51991CBC437A00B123C3 /* launch scr.jpeg */,
-				18AF4AB91CBC95F1001BA49B /* india pol.jpeg */,
 				1837A7E91CBBD70F00A4BD5E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -474,6 +520,34 @@
 			name = DBManager;
 			sourceTree = "<group>";
 		};
+		18EDB43D1CC83450006D85A8 /* Platform Images */ = {
+			isa = PBXGroup;
+			children = (
+				18EDB43E1CC83589006D85A8 /* Jaipur Terminal.jpeg */,
+				18EDB43F1CC83589006D85A8 /* Ahmedabad Junction.jpeg */,
+				18EDB4401CC83589006D85A8 /* Amritsar Junction.jpeg */,
+				18EDB4411CC83589006D85A8 /* Udupi Junction.jpeg */,
+				18EDB4421CC83589006D85A8 /* Tatanagar Junction.jpeg */,
+				18EDB4431CC83589006D85A8 /* Guwahati Junction.jpeg */,
+				18EDB4441CC83589006D85A8 /* Mumbai CST.jpeg */,
+				18EDB4451CC83589006D85A8 /* Bangalore Yeshwanthapuram.jpeg */,
+				18EDB4461CC83589006D85A8 /* Mangalore Junction.jpeg */,
+				18EDB4471CC83589006D85A8 /* Chennai Junction.jpeg */,
+				18EDB4481CC83589006D85A8 /* Patna Junction.jpeg */,
+				18EDB4491CC83589006D85A8 /* Thiruvananthpuram Station.jpeg */,
+				18EDB44A1CC83589006D85A8 /* Lucknow Junction.jpeg */,
+				18EDB44B1CC83589006D85A8 /* New Delhi Station.jpeg */,
+				18EDB44C1CC83589006D85A8 /* Howrah Junction.jpeg */,
+				18EDB44D1CC83589006D85A8 /* Mysore Junction.jpeg */,
+				18EDB44E1CC83589006D85A8 /* Chandigarh Junction.jpeg */,
+				18EDB44F1CC83589006D85A8 /* Kanpur Junction.jpeg */,
+				18EDB4501CC83589006D85A8 /* Pune Junction.jpeg */,
+				18EDB4511CC83589006D85A8 /* Tiruchirapalli Terminal.jpeg */,
+				18EDB4521CC83589006D85A8 /* Bhopal Junction.jpeg */,
+			);
+			name = "Platform Images";
+			sourceTree = "<group>";
+		};
 		18FED7D71CC56C33006B815D /* Train */ = {
 			isa = PBXGroup;
 			children = (
@@ -688,12 +762,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				1837A7F81CBBD70F00A4BD5E /* LaunchScreen.storyboard in Resources */,
+				18EDB4661CC83589006D85A8 /* Tiruchirapalli Terminal.jpeg in Resources */,
 				1837A7F51CBBD70F00A4BD5E /* Assets.xcassets in Resources */,
-				18AF4ABA1CBC95F1001BA49B /* india pol.jpeg in Resources */,
+				18EDB4651CC83589006D85A8 /* Pune Junction.jpeg in Resources */,
+				18EDB45B1CC83589006D85A8 /* Mangalore Junction.jpeg in Resources */,
+				18EDB4591CC83589006D85A8 /* Mumbai CST.jpeg in Resources */,
+				18EDB45E1CC83589006D85A8 /* Thiruvananthpuram Station.jpeg in Resources */,
+				18EDB4551CC83589006D85A8 /* Amritsar Junction.jpeg in Resources */,
+				18EDB4671CC83589006D85A8 /* Bhopal Junction.jpeg in Resources */,
+				18EDB4691CC83614006D85A8 /* india pol.jpeg in Resources */,
+				18EDB45D1CC83589006D85A8 /* Patna Junction.jpeg in Resources */,
+				18EDB4581CC83589006D85A8 /* Guwahati Junction.jpeg in Resources */,
+				18EDB4571CC83589006D85A8 /* Tatanagar Junction.jpeg in Resources */,
 				18FED7F61CC57F50006B815D /* SKYRailDB.db in Resources */,
+				18EDB4641CC83589006D85A8 /* Kanpur Junction.jpeg in Resources */,
+				18EDB4541CC83589006D85A8 /* Ahmedabad Junction.jpeg in Resources */,
 				18124C7F1CC58BF8008246F6 /* IMG_1981.jpg in Resources */,
 				183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */,
+				18EDB4561CC83589006D85A8 /* Udupi Junction.jpeg in Resources */,
+				18EDB45F1CC83589006D85A8 /* Lucknow Junction.jpeg in Resources */,
+				18EDB4631CC83589006D85A8 /* Chandigarh Junction.jpeg in Resources */,
+				18EDB4601CC83589006D85A8 /* New Delhi Station.jpeg in Resources */,
+				18EDB4621CC83589006D85A8 /* Mysore Junction.jpeg in Resources */,
+				18EDB4611CC83589006D85A8 /* Howrah Junction.jpeg in Resources */,
+				18EDB4531CC83589006D85A8 /* Jaipur Terminal.jpeg in Resources */,
+				18EDB4101CC82CD0006D85A8 /* Platforms.json in Resources */,
+				18EDB45A1CC83589006D85A8 /* Bangalore Yeshwanthapuram.jpeg in Resources */,
 				1837A7F31CBBD70F00A4BD5E /* Main.storyboard in Resources */,
+				18EDB45C1CC83589006D85A8 /* Chennai Junction.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

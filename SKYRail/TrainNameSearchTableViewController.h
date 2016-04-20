@@ -10,4 +10,6 @@
 
 @interface TrainNameSearchTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSString *trainName;
+
 @end

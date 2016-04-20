@@ -27,6 +27,8 @@
             self.endPid = [dict[@"Endp_ID"] integerValue];
             self.dateOfJourney = dict[@"Date_Of_Journey"];
             self.personId = [dict[@"Person_id"] integerValue];
+            self.costOfTicket = [dict[@"Cost"] integerValue];
+            self.numberOfSeats = [dict[@"Seats"] integerValue];
             
         }
         @catch (NSException *exception)

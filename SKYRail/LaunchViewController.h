@@ -11,6 +11,5 @@
 @interface LaunchViewController : UIViewController
 
 @property (strong, nonatomic) IBOutlet UIImageView *trainImage;
-@property (strong, nonatomic) IBOutlet UILabel *welcomeLabel;
 
 @end

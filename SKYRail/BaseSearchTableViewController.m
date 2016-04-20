@@ -7,8 +7,16 @@
 //
 
 #import "BaseSearchTableViewController.h"
+#import "TrainNameSearchTableViewController.h"
+#import "BetweenTwoStationsTableViewController.h"
 
 @interface BaseSearchTableViewController ()
+{
+    NSMutableArray *trainSearchResults;
+    
+    NSInteger startPid;
+    NSInteger endPid;
+}
 
 @end
 
@@ -36,6 +44,67 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"nameSearch"])
+    {
+        TrainNameSearchTableViewController *tnstvc = [segue destinationViewController];
+        tnstvc.trainName = _trainNameTextField.text;
+    }
+    else if ([segue.identifier isEqualToString:@"stationSearch"])
+    {
+        @try
+        {
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id FROM Platform WHERE Platform_Name like ',%@,'", _boardingTextField.text];
+            NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
+            
+            startPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
+            
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally
+        {
+            @try
+            {
+                
+                NSError *error;
+                
+                NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id FROM Platform WHERE Platform_Name like ',%@,'", _alightingTextField.text];
+                NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
+                
+                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
+                
+                endPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
+                
+                if (error) {
+                    SVHUD_FAILURE(error.localizedDescription);
+                    return;
+                }
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Fetch error: %@", exception.reason);
+            }
+            @finally
+            {
+                
+            }
+        }
+        BetweenTwoStationsTableViewController *btstvc = [segue destinationViewController];
+        btstvc.startPid = startPid;
+        btstvc.endPid = endPid;
+    }
+}
+
 - (void)textFieldDidEndEditing:(UITextField *)textField
 {
     [textField becomeFirstResponder];
@@ -58,59 +127,4 @@
     [self.alightingTextField resignFirstResponder];
     [self.trainNameTextField resignFirstResponder];
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

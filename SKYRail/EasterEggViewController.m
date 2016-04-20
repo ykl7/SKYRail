@@ -22,6 +22,8 @@
     _productionTextView.text = @"Presented by Saket Singh, KDS and YKL.\n\n\t\t\tWe Are SKYRail.";
     [_productionTextView setFont:[UIFont fontWithName:@"Helvetica Neue" size:17.0f]];
     
+    self.navigationItem.title = @"Hello There!";
+    
 }
 
 - (void)didReceiveMemoryWarning {

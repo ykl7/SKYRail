@@ -10,4 +10,7 @@
 
 @interface BetweenTwoStationsTableViewController : UITableViewController
 
+@property (nonatomic) NSInteger startPid;
+@property (nonatomic) NSInteger endPid;
+
 @end

@@ -7,8 +7,14 @@
 //
 
 #import "TrainNameSearchTableViewController.h"
+#import "ScheduleTableViewController.h"
 
-@interface TrainNameSearchTableViewController ()
+@interface TrainNameSearchTableViewController () <DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
+{
+    NSMutableArray *trainSearchResults;
+    NSMutableArray *startPidResults;
+    NSMutableArray *endPidResults;
+}
 
 @end
 
@@ -22,6 +28,46 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    
+    trainSearchResults = [NSMutableArray new];
+    startPidResults = [NSMutableArray new];
+    endPidResults = [NSMutableArray new];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        @try
+        {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Train WHERE Train_Name like ',%@,'", _trainName];
+            NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
+            
+            trainSearchResults = [Train returnArrayFromJSONStructure:results];
+            NSLog(@"train search results %@", trainSearchResults);
+            
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+                SVHUD_HIDE;
+            });
+        }
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +89,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 20;
+    return [trainSearchResults count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,8 +105,7 @@
     {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Train Name %li", (long) indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Starts at %li, Ends at %li", (long) indexPath.row, (long) indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", [[trainSearchResults objectAtIndex:indexPath.row] trainName]];
     return cell;
 }
 
@@ -68,61 +113,34 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"scheduleNavVC"];
+    ScheduleTableViewController *stvc = [navVC viewControllers][0];
+    stvc.trainId = [[trainSearchResults objectAtIndex:indexPath.row] trainId];
     [self presentViewController:navVC animated:YES completion:nil];
 }
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+#pragma mark - DZN Empty Data Set Source
+
+- (UIColor *)backgroundColorForEmptyDataSet:(UIScrollView *)scrollView
+{
+    return [UIColor clearColor];
+}
+
+- (NSAttributedString *)titleForEmptyDataSet:(UIScrollView *)scrollView
+{
     
-    // Configure the cell...
+    NSString *text = @"NO ROWS LOADED";
     
-    return cell;
+    NSDictionary *attributes = @{NSFontAttributeName: [UIFont fontWithName:@"Futura-Medium" size:18.f],
+                                 NSForegroundColorAttributeName: [UIColor darkGrayColor]};
+    
+    return [[NSAttributedString alloc] initWithString:text attributes:attributes];
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+#pragma mark - DZN Empty Data Set Source
+
+- (BOOL)emptyDataSetShouldDisplay:(UIScrollView *)scrollView
+{
+    return (trainSearchResults.count == 0);
 }
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

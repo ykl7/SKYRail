@@ -20,8 +20,8 @@
         @try
         {
             
-            self.trainId = [dict[@"Train_ID"] integerValue];
-            self.platformId = [dict[@"Platform_Id"] integerValue];
+            self.trainId = [dict[@"Train_id"] integerValue];
+            self.platformId = [dict[@"Platform_id"] integerValue];
             self.depTime = dict[@"Departure_time"];
             self.arrTime = dict[@"Arrival_time"];
             

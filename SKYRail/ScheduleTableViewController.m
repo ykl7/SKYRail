@@ -9,12 +9,18 @@
 #import "ScheduleTableViewController.h"
 
 @interface ScheduleTableViewController ()
+{
+    NSMutableArray *completeSet;
+    NSMutableArray *pidSet;
+    NSMutableArray *platformNames;
+}
 
 @end
 
 @implementation ScheduleTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -22,6 +28,41 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    NSLog(@"train id %li", _trainId);
+    completeSet = [NSMutableArray new];
+    pidSet = [NSMutableArray new];
+    platformNames = [NSMutableArray new];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Visits WHERE Train_id = %li", _trainId];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+            completeSet = [Visits returnArrayFromJSONStructure:results];
+            
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally
+        {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self.tableView reloadData];
+            });
+        }
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,7 +84,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 8;
+    return [completeSet count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -54,13 +95,39 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *cellId = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId forIndexPath:indexPath];
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Platform %li", (long) indexPath.row];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"Arrival %li, Departure %li", (long) indexPath.row, (long) indexPath.row];
+    // method being called before platforms array is fully populated
+    cell.textLabel.text = @"";
+    @try {
+        
+        NSError *error;
+        
+        NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Platform WHERE Platform_Id = %li", [[completeSet objectAtIndex:indexPath.row] platformId]];
+        
+        NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+        NSDictionary *temp = [results firstObject];
+        
+        if (temp) {
+            cell.textLabel.text = [NSString stringWithFormat:@"Platform %@", [temp objectForKey:@"Platform_Name"]];
+        }
+        
+        if (error) {
+            SVHUD_FAILURE(error.localizedDescription);
+        }
+    }
+    @catch (NSException *exception) {
+        NSLog(@"Fetch error: %@", exception.reason);
+    }
+    @finally {
+        
+    }
+    
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"Arrival %@, Departure %@", [[completeSet objectAtIndex:indexPath.row] arrTime], [[completeSet objectAtIndex:indexPath.row] depTime]];
+    
     return cell;
 }
 
@@ -73,59 +140,5 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

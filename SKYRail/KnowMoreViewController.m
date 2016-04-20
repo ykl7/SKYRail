@@ -14,14 +14,39 @@
 
 @implementation KnowMoreViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = _cityName;
+    _cityImage.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@.jpeg", _cityName]];
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Platforms" ofType:@"json"];
+    NSData *content = [[NSData alloc] initWithContentsOfFile:filePath];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:content options:kNilOptions error:nil];
+    for (NSDictionary *dict in json)
+    {
+        if ([[dict objectForKey:@"name"] isEqualToString:_cityName])
+        {
+            _cityDesc.text = [dict objectForKey:@"description"];
+        }
+    }
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewWillAppear:(BOOL)animated
+{
+    [_cityDesc setFont:[UIFont systemFontOfSize:18.0]];
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)backToList:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

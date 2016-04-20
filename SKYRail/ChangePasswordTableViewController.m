@@ -9,12 +9,18 @@
 #import "ChangePasswordTableViewController.h"
 
 @interface ChangePasswordTableViewController ()
+{
+    User *user;
+    
+    NSMutableArray *persons;
+}
 
 @end
 
 @implementation ChangePasswordTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -22,6 +28,39 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    user = [User currentUser];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    persons = [NSMutableArray new];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Person WHERE email = '%@'", user.email];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+            persons = [Person returnArrayFromJSONStructure:results];
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                SVHUD_HIDE;
+                [self.tableView reloadData];
+            });
+        }
+        
+    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,6 +77,42 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if (indexPath.section == 1)
+    {
+        if ([_confirmPasswordTF.text length] > 6 && [_oldPasswordTF.text length] > 0 && [_changedPasswordTF.text length] > 6)
+        {
+            if ([_oldPasswordTF.text isEqualToString:[[persons firstObject] password]] && [_changedPasswordTF.text isEqualToString:_confirmPasswordTF.text])
+            {
+                @try {
+                    
+                    NSError *error;
+                    
+                    NSString *queryString = [NSString stringWithFormat:@"UPDATE Person SET password = '%@' WHERE email = '%@'", _changedPasswordTF.text, user.email];
+                    
+                    if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                    {
+                        // Failed
+                        NSLog(@"Failed %@", error.localizedDescription);
+                    }
+                }
+                @catch (NSException *exception) {
+                    NSLog(@"Fetch error: %@", exception.reason);
+                }
+                @finally {
+                }
+            }
+            else
+            {
+                UIAlertView *invalidAlert = [[UIAlertView alloc] initWithTitle:@"Invalid entries" message:@"Please fill in required details correctly" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                [invalidAlert show];
+            }
+        }
+        else
+        {
+            UIAlertView *invalidAlert = [[UIAlertView alloc] initWithTitle:@"Invalid entries" message:@"Please fill in required details correctly" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+            [invalidAlert show];
+        }
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -63,59 +138,4 @@
     [self.changedPasswordTF resignFirstResponder];
     [self.confirmPasswordTF resignFirstResponder];
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end

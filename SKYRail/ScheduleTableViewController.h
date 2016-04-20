@@ -10,4 +10,6 @@
 
 @interface ScheduleTableViewController : UITableViewController
 
+@property (nonatomic) NSInteger trainId;
+
 @end

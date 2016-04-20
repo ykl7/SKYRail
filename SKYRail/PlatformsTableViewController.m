@@ -7,8 +7,12 @@
 //
 
 #import "PlatformsTableViewController.h"
+#import "KnowMoreViewController.h"
 
 @interface PlatformsTableViewController ()
+{
+    NSMutableArray *platforms;
+}
 
 @end
 
@@ -22,11 +26,43 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    SVHUD_SHOW;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Platform"];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+            platforms = [Platform returnArrayFromJSONStructure:results];
+            
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                SVHUD_HIDE;
+                [self.tableView reloadData];
+            });
+        }
+        
+    });
 }
 
 #pragma mark - Table view data source
@@ -43,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 25;
+    return [platforms count];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -59,12 +95,17 @@
     {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"Platform %li", (long) indexPath.row];
+    cell.textLabel.text = [NSString stringWithFormat:@"Check out %@", [[platforms objectAtIndex:indexPath.row] platformName]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"knowMoreNavVC"];
+    KnowMoreViewController *kmvc = [navVC viewControllers][0];
+    kmvc.cityName = [[platforms objectAtIndex:indexPath.row] platformName];
+    [self presentViewController:navVC animated:YES
+                     completion:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

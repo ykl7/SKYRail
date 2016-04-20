@@ -15,5 +15,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *dojLabel;
 @property (strong, nonatomic) IBOutlet UILabel *fromLabel;
 @property (strong, nonatomic) IBOutlet UILabel *toLabel;
+@property (strong, nonatomic) IBOutlet UILabel *costLabel;
+
+@property (strong, nonatomic) NSNumber *pnr;
 
 @end

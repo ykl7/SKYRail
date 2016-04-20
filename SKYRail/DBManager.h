@@ -8,11 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class Person;
-
 @interface DBManager : NSObject
-
-@property (strong, nonatomic) Person *user;
 
 - (instancetype)initWithDatabasePath:(NSString *)path;
 

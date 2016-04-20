@@ -13,4 +13,6 @@
 @property (strong, nonatomic) IBOutlet UIImageView *cityImage;
 @property (strong, nonatomic) IBOutlet UITextView *cityDesc;
 
+@property (strong, nonatomic) NSString *cityName;
+
 @end

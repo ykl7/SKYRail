@@ -9,12 +9,18 @@
 #import "EditUserTableViewController.h"
 
 @interface EditUserTableViewController ()
+{
+    User *user;
+    
+    BOOL anyChange;
+}
 
 @end
 
 @implementation EditUserTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -24,7 +30,18 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)viewWillAppear:(BOOL)animated
+{
+    user = [User currentUser];
+    
+    [_userNameTF setText:@""];
+    [_mobileNoTF setText:@""];
+    
+    anyChange = NO;
+}
+
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
@@ -38,6 +55,53 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if ([_userNameTF.text length] > 0)
+    {
+        anyChange = YES;
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"UPDATE Person SET name = '%@' WHERE email = '%@'", _userNameTF.text, user.email];
+            
+            if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+            {
+                // Failed
+                NSLog(@"Failed %@", error.localizedDescription);
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally {
+        }
+    }
+    if ([_mobileNoTF.text length] == 10)
+    {
+        anyChange = YES;
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"UPDATE Person SET mob_no = %@ WHERE email = '%@'", _mobileNoTF.text, user.email];
+            
+            if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+            {
+                // Failed
+                NSLog(@"Failed %@", error.localizedDescription);
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally {
+        }
+    }
+    if (!anyChange)
+    {
+        UIAlertView *noChangeMadeAlert = [[UIAlertView alloc] initWithTitle:@"Invalid inputs" message:@"Please enter valid input(s)" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+        [noChangeMadeAlert show];
+    }
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
@@ -48,8 +112,8 @@
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField
 {
-    if (textField == self.emailTF)
-        [self.emailTF becomeFirstResponder];
+    if (textField == self.userNameTF)
+        [self.userNameTF becomeFirstResponder];
     if (textField == self.mobileNoTF)
         [self.mobileNoTF becomeFirstResponder];
     return YES;
@@ -57,62 +121,8 @@
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
-    [self.emailTF resignFirstResponder];
+    [self.userNameTF resignFirstResponder];
     [self.mobileNoTF resignFirstResponder];
 }
-
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
-}
-*/
-
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

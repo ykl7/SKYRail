@@ -1,0 +1,90 @@
+[
+	{
+		"name" : "Mangalore Junction",
+		"description" : "Mangalore, officially known as Mangaluru, is the chief port city of the Indian state of Karnataka. It is known as Kudla in Tulu, Mangaluru in Kannada, Maikāla in Beary, and Kodial in Canarese Konkani. It is located about 371 kilometres (230 mi) west of the state capital, Bangalore. Mangalore lies between the Arabian Sea and the Western Ghat mountain ranges, and is the administrative headquarters of the Dakshina Kannada (formerly South Canara) district in south western Karnataka. With its pristine beaches, broad roads and calm localities, Mangalore was ranked the 8th cleanest city of India and 2nd of Karnataka. Mangalore is the 2nd least polluted city in India and the 1st in Karnataka according to CPCB. Mangalore was ranked India's 13th and Karnataka's 2nd best destination for business."
+	},
+	{
+		"name" : "Udupi Junction",
+		"description" : "Udupi (alternatively spelled as Udipi in kannada), also known as Odipu in Tulu, is a city in the Indian state of Karnataka. It is the administrative headquarters of Udupi District. Udupi is notable for the Krishna Temple and lends its name to the popular Udupi cuisine. It is also known as Lord Parasurama Kshetra, and is famous for Kanakana Kindi. A centre of pilgrimage, Udupi is also known as Rajata Peetha and Shivalli (Shivabelle). Manipal is a locality within Udupi city. Udupi is situated about 60 km north of the industrial hub Mangalore and about 422 km northwest of state capital Bangalore by road."
+	},
+	{
+		"name" : "Mumbai CST",
+		"description" : "Mumbai, also known as Bombay, the official name until 1995) is the capital city of the Indian state of Maharashtra. It is the most populous city in India and the ninth most populous agglomeration in the world, with an estimated city population of 18.4 million. Along with the neighbouring regions of the Mumbai Metropolitan Region, it is one of the most populous urban regions in the world and the seсond most populous metropolitan area in India, with a population of 20.7 million as of 2011. Mumbai lies on the west coast of India and has a deep natural harbour. In 2009, Mumbai was named an alpha world city. It is also the wealthiest city in India, and has the highest GDP of any city in South, West, or Central Asia. Mumbai has the highest number of billionaires and millionaires among all cities in India"
+	},
+	{
+		"name" : "Bangalore Yeshwanthapuram",
+		"description" : "Bangalore, officially known as Bengaluru, is the capital of the Indian state of Karnataka. It has a population of about 8.42 million and a metropolitan population of about 8.52 million, making it the third most populous city and fifth most populous urban agglomeration in India. Located in southern India on the Deccan Plateau, at a height of over 900 m (3,000 ft) above sea level, Bangalore is known for its pleasant climate throughout the year. Its elevation is the highest among the major large cities of India."
+	},
+	{
+		"name" : "New Delhi Station",
+		"description" : "New Delhi is a municipality and district in Delhi which serves as the capital and seat of government of India. In addition, it also serves as the seat of Government of Delhi."
+	},
+	{
+		"name" : "Tatanagar Junction",
+		"description" : "Jamshedpur is the headquarters of the East Singhbhum district of Jharkhand. According to the 2011 census of India, East Singhbhum (Jamshedpur & Seraikela-Kharsawan) district has current population of 1,337,131; the Jamshedpur urban agglomeration (UA), which includes the adjoining areas, Jamshedpur Urban Area is the third Largest place in Eastern India . It is located on the Chota Nagpur plateau and is surrounded by the picturesque Dalma Hills. The city is bordered by the rivers Subarnarekha and Kharkai on the north and west parts of the city."
+	},
+	{
+		"name" : "Patna Junction",
+		"description" : "Patna is the capital and largest city of the state of Bihar in India. Patna is the second largest city in eastern India after Kolkata. It had an estimated population of 1.68 million in 2011, making it the 19th largest city in India. With over 2 million people, its urban agglomeration is the 18th largest in India. Patna also serves as the seat of Patna High Court."
+	},
+	{
+		"name" : "Howrah Junction",
+		"description" : "Kolkata formerly Calcutta is the capital of the Indian state of West Bengal. Located on the east bank of the Hooghly river, it is the principal commercial, cultural, and educational centre of East India, while the Port of Kolkata is India's oldest operating port and its sole major riverine port. As of 2011, the city had 4.5 million residents; the urban agglomeration, which comprises the city and its suburbs, was home to approximately 14.1 million, making it the third-most populous metropolitan area in India. As of 2008, its gross domestic product (adjusted for purchasing power parity) was estimated to be US$104 billion, which would be third highest among Indian cities, behind Mumbai and Delhi. As a growing metropolitan city in a developing country, Kolkata confronts substantial urban pollution, traffic congestion, poverty, overpopulation, and other logistic and socioeconomic problems."
+	},
+	{
+		"name" : "Amritsar Junction",
+		"description" : "Amritsar, historically also known as Rāmdāspur and colloquially as Ambarsar, is a city in north-western part in India and the administrative headquarters of the Amritsar district in the state of Punjab."
+	},
+	{
+		"name" : "Chennai Junction",
+		"description" : "Chennai (formerly known as Madras) is the capital city of the Indian state of Tamil Nadu. Located on the Coromandel Coast off the Bay of Bengal, it is the biggest cultural, economic and educational centre in South India. Chennai is known as the 'Detroit of South Asia' for its automobile industry. It is the fourth-largest city and fourth-most populous metropolitan area in the country and 36th-largest urban area in the world. Chennai is the most visited city in India by foreign tourists, and 38th most visited city in the world. The Quality of Living Survey rated Chennai as the safest city in India. attracts about 45 percent of health tourists from abroad arriving in the country and 30 to 40 percent of domestic health tourists. As such, it is termed 'India's health capital'."
+	},
+	{
+		"name" : "Ahmedabad Junction",
+		"description" : "Ahmedabad, also known as Amdavad is the largest city and former capital of Gujarat. It is the administrative headquarters of the Ahmedabad district and the seat of the Gujarat High Court. With a population of more than 6.3 million and an extended population of 7.2 million, it is the sixth largest city and seventh largest metropolitan area of India. Ahmedabad is located on the banks of the Sabarmati River, 30 km (19 mi) from the state capital Gandhinagar."
+	},
+	{
+		"name" : "Thiruvananthpuram Station",
+		"description" : "Thiruvananthapuram, formerly known as Trivandrum, is the capital city of the Indian state of Kerala. It is on the west coast of India near the extreme south of the mainland. Referred to by Mahatma Gandhi as the 'evergreen city of India', it is characterised by its undulating terrain of low coastal hills and busy commercial alleys. With a population of 957,730 inhabitants Thiruvananthapuram contributes nearly 80% of the state's software exports and is a major IT hub"
+	},
+	{
+		"name" : "Chandigarh Junction",
+		"description" : "Chandigarh is a city and a union territory in the northern part of India that serves as the capital of the states of Punjab and Haryana. As a union territory, the city is ruled directly by the Union Government and is not part of either state. Chandigarh and adjoining cities of Mohali (Punjab) and Panchkula (Haryana) are together called Chandigarh Tricity."
+	},
+	{
+		"name" : "Pune Junction",
+		"description" : "Pune, a sprawling city in the Indian state of Maharashtra, was once the base of the peshwas (prime ministers) of the Maratha Empire. It's known for the grand Aga Khan Palace, built in 1892 and now a memorial to Mahatma Gandhi, whose ashes are preserved in the garden. The 8th-century Pataleshwar Cave Temple is dedicated to the Hindu god Shiva."
+	},
+	{
+		"name" : "Lucknow Junction",
+		"description" : "Lucknow is the largest city of the state of Uttar Pradesh, India[5] A major metropolitan city of India, Lucknow is the administrative headquarters of the eponymous District and Division. It is the 2nd largest city in north, east and central India after Delhi (population-wise). It is also the largest city in Uttar Pradesh (population-wise). Lucknow has always been known as a multicultural city that flourished as a North Indian cultural and artistic hub and the seat of power of Nawabs in the 18th and 19th centuries. It continues to be an important centre of governance, administration, education, commerce, aerospace, finance, pharmaceuticals, technology, design, culture, tourism, music and poetry."
+	},
+	{
+		"name" : "Kanpur Junction",
+		"description" : "Kanpur is the largest city in the state of Uttar Pradesh in India. It is the administrative headquarters of Kanpur Nagar district and Kanpur division. It is the second largest industrial town in north India, following Delhi."
+	},
+	{
+		"name" : "Bhopal Junction",
+		"description" : "Bhopal is the capital of the Indian state of Madhya Pradesh and the administrative headquarters of Bhopal district and Bhopal division. The city was the capital of the former Bhopal State. Bhopal is known as the City of Lakes for its various natural as well as artificial lakes and is also one of the greenest cities in India. It is the 17th largest city in the country and 131st in the world."
+	},
+	{
+		"name" : "Mysore Junction",
+		"description" : "Mysore (or Mysuru), a city in India's Karnataka state, was the capital of the Kingdom of Mysore from 1399-1947. In its center is opulent Mysore Palace, former seat of the ruling Wodeyar dynasty. The palace blends Hindu, Islamic, Gothic and Rajput styles, and is dramatically lit at night. Mysore is also home to the centuries-old Devaraja Market, filled with spices, silk and sandalwood."
+	},
+	{
+		"name" : "Tiruchirapalli Terminal",
+		"description" : "Tiruchirappalli (formerly Trichinopoly in English), also called Tiruchi or Trichy, is a city in the Indian state of Tamil Nadu and the administrative headquarters of Tiruchirappalli District. It is the fourth largest municipal corporation and the fourth largest urban agglomeration in the state. Located 322 kilometres (200 mi) south of Chennai and 379 kilometres (235 mi) north of Kanyakumari, Tiruchirappalli sits almost at the geographic centre of the state. The Kaveri Delta begins 16 kilometres (9.9 mi) west of the city as the Kaveri river splits into two, forming the island of Srirangam, now incorporated into Tiruchirappalli City Municipal Corporation. Occupying 167.23 square kilometres (64.57 sq mi), the city was home to 916,857 people as of 2011"
+	},
+	{
+		"name" : "Guwahati Juntion",
+		"description" : "Guwahati, Pragjyotishpura in ancient Assam, Gauhati in the modern era) is the largest city of Assam, a major riverine port city and one of the fastest growing cities in India."
+	},
+	{
+		"name" : "Hyderabad Junction",
+		"description" : "Hyderabad is the capital of southern India's Telangana state. A major center for the technology industry, it's home to many upscale restaurants and shops. Its historic sites include Golconda Fort, a former diamond-trading center that was once the Qutb Shahi dynastic capital. The Charminar, a 16th-century mosque whose 4 arches support towering minarets, is an old city landmark near the long-standing Laad Bazaar."
+	},
+	{
+		"name" : "Jaipur Terminal",
+		"description" : "Jaipur, the capital of India’s Rajasthan state, evokes the royal family that once ruled the region and that, in 1727, founded what is now called the Old City, or “Pink City” for its trademark building color. At the center of its stately street grid (notable in India) stands the opulent, collonaded City Palace complex, which today houses several museum collections of textiles and art."
+	}
+]

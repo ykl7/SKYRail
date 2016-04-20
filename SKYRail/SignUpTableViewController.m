@@ -10,12 +10,19 @@
 #import "User.h"
 
 @interface SignUpTableViewController ()
+{
+    NSMutableArray *previousUsers;
+    NSMutableArray *previousEmails;
+    
+    BOOL previousUserFlag;
+}
 
 @end
 
 @implementation SignUpTableViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -23,6 +30,49 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    previousUsers = [NSMutableArray new];
+    previousEmails = [NSMutableArray new];
+    
+    previousUserFlag = NO;
+    
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        @try {
+            
+            NSError *error;
+            
+            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Person"];
+            
+            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+            
+            previousUsers = [Person returnArrayFromJSONStructure:results];
+            
+            for (Person *p in previousUsers)
+            {
+                [previousEmails addObject:p.email];
+            }
+            
+            if (error) {
+                SVHUD_FAILURE(error.localizedDescription);
+                return;
+            }
+        }
+        @catch (NSException *exception) {
+            NSLog(@"Fetch error: %@", exception.reason);
+        }
+        @finally {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                SVHUD_HIDE;
+            });
+        }
+        
+    });
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -51,10 +101,35 @@
             else
             {
                 // enter user details into a table here
-                
-                UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarVC"];
-                [tabBarVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
-                [self presentViewController:tabBarVC animated:YES completion:nil];
+                for (int i = 0; i<previousEmails.count; i++)
+                {
+                    if ([_emailTextField.text isEqualToString:[previousEmails objectAtIndex:i]])
+                    {
+                        previousUserFlag = YES;
+                        break;
+                    }
+                }
+                if (!previousUserFlag)
+                {
+                    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Person (name, mob_no, email, gender, password) VALUES ('%@', %@, '%@', '%@', '%@')", _nameTextField.text, _mobileNumberTextField.text, _emailTextField.text, _genderTextField.text, _passwordTextField.text];
+                    NSError *error;
+                    if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                    {
+                        // Failed
+                        NSLog(@"Failed %@", error.localizedDescription);
+                    }
+                    User *user = [[User alloc] initWithName:_nameTextField.text email:_emailTextField.text password:_passwordTextField.text mobileNo:_mobileNumberTextField.text gender:_genderTextField.text];
+                    [user saveToDefaults];
+                    
+                    UITabBarController *tabBarVC = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarVC"];
+                    [tabBarVC setModalTransitionStyle:UIModalTransitionStyleFlipHorizontal];
+                    [self presentViewController:tabBarVC animated:YES completion:nil];
+                }
+                else
+                {
+                    UIAlertView *alreadyThereAlert = [[UIAlertView alloc] initWithTitle:@"email already registered" message:@"Please use different email id or login instead" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                    [alreadyThereAlert show];
+                }
             }
         }
         else

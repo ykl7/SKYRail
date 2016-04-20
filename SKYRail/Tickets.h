@@ -17,6 +17,8 @@
 @property (nonatomic) NSInteger startPid;
 @property (nonatomic) NSInteger endPid;
 @property (nonatomic) NSInteger personId;
+@property (nonatomic) NSInteger costOfTicket;
+@property (nonatomic) NSInteger numberOfSeats;
 
 - (instancetype)initWithDict:(id)dict;
 

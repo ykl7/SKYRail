@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface EditUserTableViewController : UITableViewController
-@property (strong, nonatomic) IBOutlet UITextField *emailTF;
 @property (strong, nonatomic) IBOutlet UITextField *mobileNoTF;
+@property (strong, nonatomic) IBOutlet UITextField *userNameTF;
 
 @end
