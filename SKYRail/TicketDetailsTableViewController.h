@@ -18,5 +18,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *costLabel;
 
 @property (strong, nonatomic) NSNumber *pnr;
+@property (nonatomic) NSInteger personId;
 
 @end

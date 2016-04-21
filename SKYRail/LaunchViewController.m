@@ -27,6 +27,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     [UIView animateWithDuration:2.0 delay:0.5 usingSpringWithDamping:0.6 initialSpringVelocity:0.6 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         _trainImage.transform = CGAffineTransformIdentity;
+        _welcomeLabel.transform = CGAffineTransformIdentity;
     } completion:^(BOOL finished) {
         [self moveToNewView];
     }];

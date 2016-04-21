@@ -59,134 +59,11 @@
     seatsGone = [NSMutableArray new];
     pricingResults = [NSMutableArray new];
     persons = [NSMutableArray new];
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-//        @try
-//        {
-//            NSError *error;
-//            
-//            NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like ',%@,'", _boardingStationTextField.text];
-//            NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
-//            
-//            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
-//            NSLog(@"START RESULTS %@", results);
-//            
-//            startPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
-//            startXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
-//            startYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
-//            
-//            if (error) {
-//                SVHUD_FAILURE(error.localizedDescription);
-//                return;
-//            }
-//        }
-//        @catch (NSException *exception)
-//        {
-//            NSLog(@"Fetch error: %@", exception.reason);
-//        }
-//        @finally
-//        {
-//            @try
-//            {
-//                
-//                NSError *error;
-//                
-//                NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like ',%@,'", _alightingStationTextField.text];
-//                NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
-//                
-//                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
-//                NSLog(@"END RESULTS %@", results);
-//                
-//                endPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
-//                endXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
-//                endYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
-//                
-//                distanceToTravel = sqrt(((endXcoord-startXcoord)^2) + ((endYcoord-startYcoord)));
-//                
-//                if (error)
-//                {
-//                    SVHUD_FAILURE(error.localizedDescription);
-//                    return;
-//                }
-//            }
-//            @catch (NSException *exception)
-//            {
-//                NSLog(@"Fetch error: %@", exception.reason);
-//            }
-//            @finally
-//            {
-//                @try
-//                {
-//                    
-//                    NSError *error;
-//                    
-//                    NSString *queryString = [NSString stringWithFormat:@"SELECT train_id FROM visits WHERE platform_id = %li INTERSECT SELECT train_id FROM visits WHERE platform_id = %li", startPid, endPid];
-//                    
-//                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-//                    NSLog(@"results %@", results);
-//                    initialResult = [NSMutableArray arrayWithArray:results];
-//                    if (error)
-//                    {
-//                        SVHUD_FAILURE(error.localizedDescription);
-//                        return;
-//                    }
-//                }
-//                @catch (NSException *exception)
-//                {
-//                    NSLog(@"Fetch error: %@", exception.reason);
-//                }
-//                @finally
-//                {
-//                    @try
-//                    {
-//                        for (int i=0; i<initialResult.count; i++)
-//                        {
-//                            NSError *err;
-//                            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Train WHERE train_id = %li", [[[initialResult objectAtIndex:i] objectForKey:@"train_id"] integerValue]];
-//                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&err];
-//                            NSLog(@"results %@", results);
-//                            [trainNames addObjectsFromArray:results];
-//                            NSLog(@"train names %@ %li", [[trainNames objectAtIndex:i] objectForKey:@"Train_name"], [[[trainNames objectAtIndex:i] objectForKey:@"Train_ID"] integerValue]);
-//                            if (err)
-//                            {
-//                                SVHUD_FAILURE(err.localizedDescription);
-//                                return;
-//                            }
-//                        }
-//                    }
-//                    @catch (NSException *exception)
-//                    {
-//                        NSLog(@"Fetch error: %@", exception.reason);
-//                    }
-//                    @finally
-//                    {
-//                        @try {
-//                            NSError *error;
-//                            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Pricing WHERE Train_ID = %li", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue]];
-//                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-//                            pricingResults = [Pricing returnArrayFromJSONStructure:results];
-//                            costIncurred = [[[pricingResults firstObject] baseFare] integerValue] * (distanceToTravel * [[pricingResults firstObject] integerValue]);
-//                            if (error)
-//                            {
-//                                SVHUD_FAILURE(error.localizedDescription);
-//                                return;
-//                            }
-//                        }
-//                        @catch (NSException *exception)
-//                        {
-//                            NSLog(@"Fetch error: %@", exception.reason);
-//                        }
-//                        @finally
-//                        {
-//                            NSError *error;
-//                            NSString *queryString = [NSString stringWithFormat:@"SELECT * from Person WHERE email = '%@'", user.email];
-//                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-//                            persons = [Person returnArrayFromJSONStructure:results];
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    });
+    
+    [_numberOfSeatsTextField setText:@""];
+    [_alightingStationTextField setText:@""];
+    [_boardingStationTextField setText:@""];
+    [_dateOfJourneryTextField setText:@""];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -208,56 +85,26 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 3)
     {
-        @try
-        {
-            NSError *error;
-            
-            NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like ',%@,'", _boardingStationTextField.text];
-            NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
-            
-            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
-            
-            // figure out the right keys here, rest done
-            startPid = [[[results firstObject] objectForKey:@"Platform_id"] integerValue];
-            startXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
-            startYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
-            
-            NSLog(@"START RESULTS id %li x %li y %li", startPid, startXcoord, startYcoord);
-            
-            
-            if (error) {
-                SVHUD_FAILURE(error.localizedDescription);
-                return;
-            }
-        }
-        @catch (NSException *exception)
-        {
-            NSLog(@"Fetch error: %@", exception.reason);
-        }
-        @finally
+        if ([_alightingStationTextField.text length] > 0 && [_boardingStationTextField.text length] && [_numberOfSeatsTextField.text length] > 0 && [_dateOfJourneryTextField.text length] == 6)
         {
             @try
             {
-                
                 NSError *error;
                 
-                NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like ',%@,'", _alightingStationTextField.text];
-                NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"," withString:@"%"];
+                NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like '{%@{'", _boardingStationTextField.text];
+                NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"{" withString:@"%"];
                 
                 NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
                 
                 // figure out the right keys here, rest done
-                endPid = [[[results firstObject] objectForKey:@"Platform_id"] integerValue];
-                endXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
-                endYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
+                startPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
+                startXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
+                startYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
                 
-                NSLog(@"END RESULTS id %li x %li y %li", endPid, endXcoord, endYcoord);
+                NSLog(@"START RESULTS id %li x %li y %li", startPid, startXcoord, startYcoord);
                 
-                distanceToTravel = (sqrt(((endXcoord-startXcoord)^2) + ((endYcoord-startYcoord)))) * 100;
-                NSLog(@"DISTANCE %li", distanceToTravel);
                 
-                if (error)
-                {
+                if (error) {
                     SVHUD_FAILURE(error.localizedDescription);
                     return;
                 }
@@ -273,12 +120,21 @@
                     
                     NSError *error;
                     
-                    NSString *queryString = [NSString stringWithFormat:@"SELECT train_id FROM visits WHERE platform_id = %li INTERSECT SELECT train_id FROM visits WHERE platform_id = %li", startPid, endPid];
-                    NSLog(@"FIRST QUERY %@", queryString);
+                    NSString *queryString = [NSString stringWithFormat:@"SELECT Platform_id, Xcoord, YCoord FROM Platform WHERE Platform_Name like '{%@{'", _alightingStationTextField.text];
+                    NSString *actualQuery = [queryString stringByReplacingOccurrencesOfString:@"{" withString:@"%"];
                     
-                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-                    NSLog(@"results %@", results);
-                    initialResult = [NSMutableArray arrayWithArray:results];
+                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:actualQuery error:&error];
+                    
+                    // figure out the right keys here, rest done
+                    endPid = [[[results firstObject] objectForKey:@"Platform_Id"] integerValue];
+                    endXcoord = [[[results firstObject] objectForKey:@"Xcoord"] integerValue];
+                    endYcoord = [[[results firstObject] objectForKey:@"YCoord"] integerValue];
+                    
+                    NSLog(@"END RESULTS id %li x %li y %li", endPid, endXcoord, endYcoord);
+                    
+                    distanceToTravel = (sqrt(((endXcoord-startXcoord)*(endXcoord-startXcoord)) + ((endYcoord-startYcoord)*(endYcoord-startYcoord))));
+                    NSLog(@"DISTANCE %li", distanceToTravel);
+                    
                     if (error)
                     {
                         SVHUD_FAILURE(error.localizedDescription);
@@ -293,19 +149,19 @@
                 {
                     @try
                     {
-                        for (int i=0; i<initialResult.count; i++)
+                        
+                        NSError *error;
+                        
+                        NSString *queryString = [NSString stringWithFormat:@"SELECT train_id FROM visits WHERE platform_id = %li INTERSECT SELECT train_id FROM visits WHERE platform_id = %li", startPid, endPid];
+                        NSLog(@"FIRST QUERY %@", queryString);
+                        
+                        NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                        NSLog(@"results %@", results);
+                        initialResult = [NSMutableArray arrayWithArray:results];
+                        if (error)
                         {
-                            NSError *err;
-                            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Train WHERE train_id = %li", [[[initialResult objectAtIndex:i] objectForKey:@"train_id"] integerValue]];
-                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&err];
-                            NSLog(@"results %@", results);
-                            [trainNames addObjectsFromArray:results];
-                            NSLog(@"train names %@ %li", [[trainNames objectAtIndex:i] objectForKey:@"Train_name"], [[[trainNames objectAtIndex:i] objectForKey:@"Train_ID"] integerValue]);
-                            if (err)
-                            {
-                                SVHUD_FAILURE(err.localizedDescription);
-                                return;
-                            }
+                            SVHUD_FAILURE(error.localizedDescription);
+                            return;
                         }
                     }
                     @catch (NSException *exception)
@@ -314,16 +170,21 @@
                     }
                     @finally
                     {
-                        @try {
-                            NSError *error;
-                            NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Pricing WHERE Train_ID = %li", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue]];
-                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-                            pricingResults = [Pricing returnArrayFromJSONStructure:results];
-                            costIncurred = [[[pricingResults firstObject] baseFare] integerValue] * (distanceToTravel * [[pricingResults firstObject] integerValue]);
-                            if (error)
+                        @try
+                        {
+                            for (int i=0; i<initialResult.count; i++)
                             {
-                                SVHUD_FAILURE(error.localizedDescription);
-                                return;
+                                NSError *err;
+                                NSString *queryString = [NSString stringWithFormat:@"SELECT Train_ID, Train_name, Capacity FROM Train WHERE train_id = %li", [[[initialResult objectAtIndex:i] objectForKey:@"train_id"] integerValue]];
+                                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&err];
+                                [trainNames addObjectsFromArray:results];
+                                NSLog(@"train names first %@", [[trainNames firstObject] objectForKey:@"Train_ID"]);
+                                NSLog(@"results %@", results);
+                                if (err)
+                                {
+                                    SVHUD_FAILURE(err.localizedDescription);
+                                    return;
+                                }
                             }
                         }
                         @catch (NSException *exception)
@@ -332,16 +193,12 @@
                         }
                         @finally
                         {
-                            NSError *error;
-                            NSString *queryString = [NSString stringWithFormat:@"SELECT * from Person WHERE email = '%@'", user.email];
-                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-                            persons = [Person returnArrayFromJSONStructure:results];
                             @try {
                                 NSError *error;
-                                
-                                NSString *queryString = [NSString stringWithFormat:@"SELECT sum(Seats) FROM Tickets WHERE date_of_journey = '%@' AND train_id IN (SELECT train_id FROM train WHERE train_name = '%@'", _dateOfJourneryTextField.text, [[trainNames firstObject] objectForKey:@"Train_name"]];
+                                NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Pricing WHERE Train_ID = %li", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue]];
                                 NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-                                [seatsGone addObjectsFromArray:results];
+                                pricingResults = [Pricing returnArrayFromJSONStructure:results];
+                                costIncurred = [_numberOfSeatsTextField.text integerValue] * ([[[pricingResults firstObject] baseFare] integerValue] + ((distanceToTravel * [[[pricingResults firstObject] costPerKm]integerValue]))/100);
                                 if (error)
                                 {
                                     SVHUD_FAILURE(error.localizedDescription);
@@ -354,125 +211,131 @@
                             }
                             @finally
                             {
-                                if (([[trainNames firstObject] capacity] - [[seatsGone firstObject] integerValue]) > [_numberOfSeatsTextField.text integerValue])
-                                {
-                                    // book here
-                                    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Tickets (Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Person_ID, Cost) VALUES (%li, %li, '%@', %li, %li, %li, %li)", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue], distanceToTravel, [[trainNames firstObject] objectForKey:@"date_of_journey"], startPid, endPid, [[persons firstObject] personId], costIncurred];
+                                NSError *error;
+                                NSString *queryString = [NSString stringWithFormat:@"SELECT * from Person WHERE email = '%@'", user.email];
+                                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                                persons = [Person returnArrayFromJSONStructure:results];
+                                @try {
                                     NSError *error;
-                                    if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                                    
+                                    NSString *queryString = [NSString stringWithFormat:@"SELECT sum(Seats) FROM Tickets WHERE date_of_journey = '%@' AND train_id IN (SELECT train_id FROM train WHERE train_name = '%@')", _dateOfJourneryTextField.text, [[trainNames firstObject] objectForKey:@"Train_name"]];
+                                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                                    [seatsGone addObjectsFromArray:results];
+                                    if (error)
                                     {
-                                        // Failed
-                                        NSLog(@"Failed %@", error.localizedDescription);
-                                    }
-                                    @try
-                                    {
-                                        NSError *error;
-                                        
-                                        NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Tickets"];
-                                        NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-                                        bookings = [Tickets returnArrayFromJSONStructure:results];
-                                        if (error)
-                                        {
-                                            SVHUD_FAILURE(error.localizedDescription);
-                                            return;
-                                        }
-                                    } @catch (NSException *exception)
-                                    {
-                                        NSLog(@"Fetch error: %@", exception.reason);
-                                    }
-                                    @finally
-                                    {
-                                        NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Booking_History (Person_id, PNR) VALUES (%li, %li)", [[persons firstObject] personId], [[[bookings firstObject] PNR] integerValue]];
-                                        NSError *error;
-                                        if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
-                                        {
-                                            // Failed
-                                            NSLog(@"Failed %@", error.localizedDescription);
-                                        }
-                                        UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
-                                        TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
-                                        tdtvc.pnr = [[bookings firstObject] PNR];
-                                        [self presentViewController:navVC animated:YES completion:nil];
+                                        SVHUD_FAILURE(error.localizedDescription);
+                                        return;
                                     }
                                 }
-                                else
+                                @catch (NSException *exception)
                                 {
-                                    UIAlertView *noSeatsAlert = [[UIAlertView alloc] initWithTitle:@"Seats Unavailable" message:@"The requested number of seats is not free at the moment" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-                                    [noSeatsAlert show];
+                                    NSLog(@"Fetch error: %@", exception.reason);
                                 }
-                            }
+                                @finally
+                                {
+                                    if (seatsGone.count > 0)
+                                    {
+                                        if (![[[seatsGone firstObject] objectForKey:@"sum(Seats)"] isKindOfClass:[NSNull class]]) {
+                                            if (([[[trainNames firstObject] objectForKey:@"Capacity"] integerValue] - [[[seatsGone firstObject] objectForKey:@"sum(Seats)"] integerValue]) > [_numberOfSeatsTextField.text integerValue])
+                                            {
+                                                // book here
+                                                NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Tickets (Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Person_ID, Cost, Seats) VALUES (%li, %li, '%@', %li, %li, %li, %li, %li)", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue], distanceToTravel, _dateOfJourneryTextField.text, startPid, endPid, [[persons firstObject] personId], costIncurred, [_numberOfSeatsTextField.text integerValue]];
+                                                NSError *error;
+                                                if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                                                {
+                                                    // Failed
+                                                    NSLog(@"Failed %@", error.localizedDescription);
+                                                }
+                                                @try
+                                                {
+                                                    NSError *error;
+                                                    
+                                                    NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Tickets"];
+                                                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                                                    bookings = [Tickets returnArrayFromJSONStructure:results];
+                                                    if (error)
+                                                    {
+                                                        SVHUD_FAILURE(error.localizedDescription);
+                                                        return;
+                                                    }
+                                                } @catch (NSException *exception)
+                                                {
+                                                    NSLog(@"Fetch error: %@", exception.reason);
+                                                }
+                                                @finally
+                                                {
+                                                    NSLog(@"bookings last %@", [bookings lastObject]);
+                                                    NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Booking_History (Person_id, PNR) VALUES (%li, %@)", [[persons firstObject] personId], [[bookings firstObject] PNR]];
+                                                    NSError *error;
+                                                    if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                                                    {
+                                                        // Failed
+                                                        NSLog(@"Failed %@", error.localizedDescription);
+                                                    }
+                                                    UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
+                                                    TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
+                                                    tdtvc.pnr = [[bookings lastObject] PNR];
+                                                    tdtvc.personId = [[persons firstObject] personId];
+                                                    [self presentViewController:navVC animated:YES completion:nil];
+                                                }
+                                            }
+                                        }
+                                        else
+                                        {
+                                            NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Tickets (Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Person_ID, Cost, Seats) VALUES (%li, %li, '%@', %li, %li, %li, %li, %li)", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue], distanceToTravel, _dateOfJourneryTextField.text, startPid, endPid, [[persons firstObject] personId], costIncurred, [_numberOfSeatsTextField.text integerValue]];
+                                            NSError *error;
+                                            if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                                            {
+                                                // Failed
+                                                NSLog(@"Failed %@", error.localizedDescription);
+                                            }
+                                            @try
+                                            {
+                                                NSError *error;
+                                                
+                                                NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Tickets"];
+                                                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                                                bookings = [Tickets returnArrayFromJSONStructure:results];
+                                                if (error)
+                                                {
+                                                    SVHUD_FAILURE(error.localizedDescription);
+                                                    return;
+                                                }
+                                            } @catch (NSException *exception)
+                                            {
+                                                NSLog(@"Fetch error: %@", exception.reason);
+                                            }
+                                            @finally
+                                            {
+                                                NSLog(@"bookings last %@", [[bookings lastObject] PNR]);
+                                                NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Booking_History (Person_id, PNR) VALUES (%li, %@)", [[persons firstObject] personId], [[bookings lastObject] PNR]];
+                                                NSError *error;
+                                                if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                                                {
+                                                    // Failed
+                                                    NSLog(@"Failed %@", error.localizedDescription);
+                                                }
+                                                UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
+                                                TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
+                                                tdtvc.pnr = [[bookings lastObject] PNR];
+                                                tdtvc.personId = [[persons firstObject] personId];
+                                                [self presentViewController:navVC animated:YES completion:nil];
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        UIAlertView *noSeatsAlert = [[UIAlertView alloc] initWithTitle:@"Seats Unavailable" message:@"The requested number of seats is not free at the moment" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
+                                        [noSeatsAlert show];
+                                    }
+                                }
 
+                            }
                         }
                     }
                 }
             }
         }
-
-//        @try {
-//            NSError *error;
-//            
-//            NSString *queryString = [NSString stringWithFormat:@"SELECT sum(Seats) FROM Tickets WHERE date_of_journey = '%@' AND train_id IN (SELECT train_id FROM train WHERE train_name = '%@'", _dateOfJourneryTextField.text, [[trainNames firstObject] objectForKey:@"Train_name"]];
-//            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-//            [seatsGone addObjectsFromArray:results];
-//            if (error)
-//            {
-//                SVHUD_FAILURE(error.localizedDescription);
-//                return;
-//            }
-//        }
-//        @catch (NSException *exception)
-//        {
-//            NSLog(@"Fetch error: %@", exception.reason);
-//        }
-//        @finally
-//        {
-//            if (([[trainNames firstObject] capacity] - [[seatsGone firstObject] integerValue]) > [_numberOfSeatsTextField.text integerValue])
-//            {
-//                // book here
-//                NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Tickets (Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Person_ID, Cost) VALUES (%li, %li, '%@', %li, %li, %li, %li)", [[[trainNames firstObject] objectForKey:@"Train_ID"] integerValue], distanceToTravel, [[trainNames firstObject] objectForKey:@"date_of_journey"], startPid, endPid, [[persons firstObject] personId], costIncurred];
-//                NSError *error;
-//                if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
-//                {
-//                    // Failed
-//                    NSLog(@"Failed %@", error.localizedDescription);
-//                }
-//                @try
-//                {
-//                    NSError *error;
-//                    
-//                    NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Tickets"];
-//                    NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
-//                    bookings = [Tickets returnArrayFromJSONStructure:results];
-//                    if (error)
-//                    {
-//                        SVHUD_FAILURE(error.localizedDescription);
-//                        return;
-//                    }
-//                } @catch (NSException *exception)
-//                {
-//                    NSLog(@"Fetch error: %@", exception.reason);
-//                }
-//                @finally
-//                {
-//                        NSString *queryString = [NSString stringWithFormat:@"INSERT INTO Booking_History (Person_id, PNR) VALUES (%li, %li)", [[persons firstObject] personId], [[[bookings firstObject] PNR] integerValue]];
-//                        NSError *error;
-//                        if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
-//                        {
-//                            // Failed
-//                            NSLog(@"Failed %@", error.localizedDescription);
-//                        }
-//                        UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
-//                        TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
-//                        tdtvc.pnr = [[bookings firstObject] PNR];
-//                        [self presentViewController:navVC animated:YES completion:nil];
-//                }
-//            }
-//            else
-//            {
-//                UIAlertView *noSeatsAlert = [[UIAlertView alloc] initWithTitle:@"Seats Unavailable" message:@"The requested number of seats is not free at the moment" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-//                [noSeatsAlert show];
-//            }
-//        }
     }
 }
 

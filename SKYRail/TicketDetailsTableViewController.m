@@ -15,6 +15,10 @@
     
     NSString *startPlatform;
     NSString *endPlatform;
+    NSString *trainName;
+    
+    NSInteger costHere;
+    NSInteger personNow;
 }
 
 @end
@@ -47,7 +51,8 @@
     tickets = [NSMutableArray new];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
-        @try {
+        @try
+        {
             
             NSError *error;
             
@@ -56,16 +61,19 @@
             NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
             
             tickets = [Tickets returnArrayFromJSONStructure:results];
-            
+            NSLog(@"ticket %li", [[tickets firstObject] costOfTicket]);
+            costHere = [[tickets firstObject] costOfTicket];
             if (error) {
                 SVHUD_FAILURE(error.localizedDescription);
                 return;
             }
         }
-        @catch (NSException *exception) {
+        @catch (NSException *exception)
+        {
             NSLog(@"Fetch error: %@", exception.reason);
         }
-        @finally {
+        @finally
+        {
             
             @try {
                 
@@ -75,7 +83,7 @@
                 
                 NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
                 
-                startPlatform = [results firstObject];
+                startPlatform = [[results firstObject] objectForKey:@"Platform_Name"];
             
                 if (error) {
                     SVHUD_FAILURE(error.localizedDescription);
@@ -95,7 +103,7 @@
                     
                     NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
                     
-                    endPlatform = [results firstObject];
+                    endPlatform = [[results firstObject] objectForKey:@"Platform_Name"];
                     
                     if (error) {
                         SVHUD_FAILURE(error.localizedDescription);
@@ -111,26 +119,62 @@
                         NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Person WHERE email = %@", user.email];
                         NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
                         persons = [Person returnArrayFromJSONStructure:results];
+                        for (Person *p in persons)
+                        {
+                            if ([p.email isEqualToString:user.email])
+                            {
+                                personNow = p.personId;
+                                break;
+                            }
+                        }
+                        NSLog(@"person id now %li", personNow);
                         if (error)
                         {
                             SVHUD_FAILURE(error.localizedDescription);
                             return;
                         }
                     }
-                    @catch (NSException *exception) {
+                    @catch (NSException *exception)
+                    {
                         NSLog(@"Fetch error: %@", exception.reason);
                     }
-                    @finally {
-                        dispatch_async(dispatch_get_main_queue(), ^{
-                            SVHUD_HIDE;
-                            _pnrLabel.text = [NSString stringWithFormat:@"PNR : %@", [[tickets objectAtIndex:0] PNR]];
-                            _trainNoLabel.text = [NSString stringWithFormat:@"Train No : %li", [[tickets objectAtIndex:0] trainId]];
-                            _trainNameLabel.text = [NSString stringWithFormat:@"%@", [[tickets objectAtIndex:0] trainName]];
-                            _toLabel.text = [NSString stringWithFormat:@"To : %li", [[tickets objectAtIndex:0] startPid]];
-                            _fromLabel.text = [NSString stringWithFormat:@"From : %li", [[tickets objectAtIndex:0] endPid]];
-                            _dojLabel.text = [NSString stringWithFormat:@"On : %@", [[tickets objectAtIndex:0] dateOfJourney]];
-                            _costLabel.text = [NSString stringWithFormat:@"Cost : %li", [[tickets objectAtIndex:0] costOfTicket]];
-                        });
+                    @finally
+                    {
+                        @try
+                        {
+                            
+                            NSError *error;
+                            
+                            NSString *queryString = [NSString stringWithFormat:@"SELECT Train_Name FROM Train WHERE Train_id = %li", [[tickets firstObject] trainId]];
+                            
+                            NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                            
+                            trainName = [[results firstObject] objectForKey:@"Train_name"];
+                            NSLog(@"train name here %@", trainName);
+                            if (error) {
+                                SVHUD_FAILURE(error.localizedDescription);
+                                return;
+                            }
+                        }
+                        @catch (NSException *exception)
+                        {
+                            NSLog(@"Fetch error: %@", exception.reason);
+                        }
+                        @finally
+                        {
+                        
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                                SVHUD_HIDE;
+                                _pnrLabel.text = [NSString stringWithFormat:@"PNR : %@", [[tickets firstObject] PNR]];
+                                _trainNoLabel.text = [NSString stringWithFormat:@"Train No : %li", [[tickets firstObject] trainId]];
+                                _trainNameLabel.text = [NSString stringWithFormat:@"Train : %@", trainName];
+                                _toLabel.text = [NSString stringWithFormat:@"To : %@", endPlatform];
+                                _fromLabel.text = [NSString stringWithFormat:@"From : %@", startPlatform];
+                                _dojLabel.text = [NSString stringWithFormat:@"On : %@", [[tickets firstObject] dateOfJourney]];
+                                _costLabel.text = [NSString stringWithFormat:@"Cost : %li", costHere];
+                                [self.tableView reloadData];
+                            });
+                        }
                     }
                 }
             }
@@ -161,12 +205,12 @@
             NSError *error;
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"dd/mm/yyyy"];
+            [formatter setDateFormat:@"yyyy-mm-dd HH:mm:ss"];
             
             NSString *stringFromDate = [formatter stringFromDate:[NSDate date]];
-            
-            NSString *queryString = [NSString stringWithFormat:@"INSERT INTO CancelledTickets (PNR, Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Deletion_Time, Person_ID) VALUES (%li, %li, %@, '%@', %li, %li, '%@', %li);", (long) [[tickets objectAtIndex:0] PNR], (long) [[tickets objectAtIndex:0] trainId], [[tickets objectAtIndex:0] distance], [[tickets objectAtIndex:0] dateOfJourney], (long) [[tickets objectAtIndex:0] startPid], (long) [[tickets objectAtIndex:0] endPid], stringFromDate, (long) [[persons objectAtIndex:0] personId]];
-            
+            NSLog(@"person id in cancel process %li", personNow);
+            NSString *queryString = [NSString stringWithFormat:@"INSERT INTO CancelledTickets (PNR, Train_ID, Journey_Distance, Date_Of_Journey, Startp_ID, Endp_ID, Deletion_Time, Person_ID) VALUES (%li, %li, %@, '%@', %li, %li, '%@', %li);", [[[tickets firstObject] PNR] integerValue], [[tickets firstObject] trainId], [[tickets firstObject] distance], [[tickets firstObject] dateOfJourney], [[tickets firstObject] startPid], [[tickets firstObject] endPid], stringFromDate, _personId];
+            NSLog(@"cancel query %@", queryString);
             if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
             {
                 // Failed
@@ -176,8 +220,10 @@
         @catch (NSException *exception) {
             NSLog(@"Fetch error: %@", exception.reason);
         }
-        @finally {
-            @try {
+        @finally
+        {
+            @try
+            {
                 NSError *error;
                 NSString *queryString = [NSString stringWithFormat:@"DELETE FROM Tickets WHERE PNR = %@", _pnr];
                 if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
@@ -185,9 +231,21 @@
                     // Failed
                     NSLog(@"Failed %@", error.localizedDescription);
                 }
-            } @catch (NSException *exception) {
+                
+            }
+            @catch (NSException *exception)
+            {
                 NSLog(@"Fetch error: %@", exception.reason);
-            } @finally {
+            }
+            @finally
+            {
+                NSError *error;
+                NSString *queryString = [NSString stringWithFormat:@"DELETE FROM Booking_History WHERE PNR = %@", _pnr];
+                if (![[DBManager sharedManager] dbExecuteUpdate:queryString error:&error])
+                {
+                    // Failed
+                    NSLog(@"Failed %@", error.localizedDescription);
+                }
                 dispatch_async(dispatch_get_main_queue(), ^{
                     SVHUD_HIDE;
                 });

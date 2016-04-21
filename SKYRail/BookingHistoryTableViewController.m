@@ -8,11 +8,13 @@
 
 #import "BookingHistoryTableViewController.h"
 #import "TicketDetailsTableViewController.h"
+#import "CancelledTicketDetailsTableViewController.h"
 
 @interface BookingHistoryTableViewController () <DZNEmptyDataSetDelegate, DZNEmptyDataSetSource>
 {
     NSMutableArray *bookings;
     NSMutableArray *persons;
+    NSMutableArray *cancelledTickets;
     
     NSInteger personIdNow;
 }
@@ -22,6 +24,7 @@
 @implementation BookingHistoryTableViewController
 
 - (void)viewDidLoad {
+    SVHUD_SHOW;
     [super viewDidLoad];
     
     // Uncomment the following line to preserve selection between presentations.
@@ -46,6 +49,7 @@
     
     bookings = [NSMutableArray new];
     persons = [NSMutableArray new];
+    cancelledTickets = [NSMutableArray new];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
@@ -78,34 +82,55 @@
         }
         @finally
         {
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            @try {
                 
-                @try {
+                NSError *error;
+                
+                NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Booking_History WHERE Person_id = %li", personIdNow];
+                
+                NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
+                
+                bookings = [BookingHistory returnArrayFromJSONStructure:results];
+                
+                if (error) {
+                    SVHUD_FAILURE(error.localizedDescription);
+                    return;
+                }
+            }
+            @catch (NSException *exception) {
+                NSLog(@"Fetch error: %@", exception.reason);
+            }
+            @finally
+            {
+                @try
+                {
                     
                     NSError *error;
                     
-                    NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM Booking_History WHERE Person_id = %li", personIdNow];
+                    NSString *queryString = [NSString stringWithFormat:@"SELECT * FROM CancelledTickets WHERE Person_id = %li", personIdNow];
                     
                     NSArray *results = [[DBManager sharedManager] dbExecuteQuery:queryString error:&error];
                     
-                    bookings = [BookingHistory returnArrayFromJSONStructure:results];
+                    cancelledTickets = [CancelledTickets returnArrayFromJSONStructure:results];
                     
-                    if (error) {
+                    if (error)
+                    {
                         SVHUD_FAILURE(error.localizedDescription);
                         return;
                     }
                 }
-                @catch (NSException *exception) {
+                @catch (NSException *exception)
+                {
                     NSLog(@"Fetch error: %@", exception.reason);
                 }
-                @finally {
+                @finally
+                {
                     dispatch_async(dispatch_get_main_queue(), ^{
                         [self.tableView reloadData];
                         SVHUD_HIDE;
                     });
                 }
-                
-            });
+            }
         }
         
     });
@@ -116,12 +141,19 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [bookings count];
+    if (section == 0)
+    {
+        return [bookings count];
+    }
+    else
+    {
+        return [cancelledTickets count];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -137,7 +169,14 @@
     {
         cell = [[UITableViewCell alloc] init];
     }
-    cell.textLabel.text = [NSString stringWithFormat:@"PNR %@", [[bookings objectAtIndex:indexPath.row] PNR]];
+    if (indexPath.section == 0)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"PNR %@", [[bookings objectAtIndex:indexPath.row] PNR]];
+    }
+    if (indexPath.section == 1)
+    {
+        cell.textLabel.text = [NSString stringWithFormat:@"PNR %@", [[cancelledTickets objectAtIndex:indexPath.row] PNR]];
+    }
     return cell;
 }
 
@@ -148,11 +187,36 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
-    TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
-    tdtvc.pnr = [[bookings objectAtIndex:indexPath.row] PNR];
-    [self presentViewController:navVC animated:YES completion:nil];
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if (indexPath.section == 0)
+    {
+        UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"ticketDetailsNavVC"];
+        TicketDetailsTableViewController *tdtvc = [navVC viewControllers][0];
+        tdtvc.pnr = [[bookings objectAtIndex:indexPath.row] PNR];
+        tdtvc.personId = personIdNow;
+        [self presentViewController:navVC animated:YES completion:nil];
+    }
+    if (indexPath.section == 1)
+    {
+        UINavigationController *navVC = [self.storyboard instantiateViewControllerWithIdentifier:@"cancelTicketNavVC"];
+        CancelledTicketDetailsTableViewController *ctdtvc = [navVC viewControllers][0];
+        ctdtvc.pnr = [[cancelledTickets objectAtIndex:indexPath.row] PNR];
+        [self presentViewController:navVC animated:YES completion:nil];
+    }
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *title;
+    if (section == 0)
+    {
+        title = @"YOUR TICKETS";
+    }
+    if (section == 1)
+    {
+        title = @"CANCELLED TICKETS";
+    }
+    return title;
 }
 
 #pragma mark - DZN Empty Data Set Source

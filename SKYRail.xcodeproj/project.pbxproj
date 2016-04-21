@@ -31,6 +31,7 @@
 		186419121CBC247E0086A237 /* ScheduleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419111CBC247E0086A237 /* ScheduleTableViewController.m */; };
 		186419191CBC25960086A237 /* BookTicketTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419181CBC25960086A237 /* BookTicketTableViewController.m */; };
 		1864191D1CBC38070086A237 /* UserDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */; };
+		189A14DA1CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 189A14D91CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.m */; };
 		18AF4AB21CBC923D001BA49B /* BaseSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */; };
 		18AF4AB51CBC9437001BA49B /* PlatformsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB41CBC9437001BA49B /* PlatformsTableViewController.m */; };
 		18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18AF4AB71CBC948D001BA49B /* MapViewController.m */; };
@@ -136,6 +137,8 @@
 		186419181CBC25960086A237 /* BookTicketTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTicketTableViewController.m; sourceTree = "<group>"; };
 		1864191B1CBC38070086A237 /* UserDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserDetailsTableViewController.h; sourceTree = "<group>"; };
 		1864191C1CBC38070086A237 /* UserDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserDetailsTableViewController.m; sourceTree = "<group>"; };
+		189A14D81CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancelledTicketDetailsTableViewController.h; sourceTree = "<group>"; };
+		189A14D91CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancelledTicketDetailsTableViewController.m; sourceTree = "<group>"; };
 		18AF4AB01CBC923D001BA49B /* BaseSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseSearchTableViewController.h; sourceTree = "<group>"; };
 		18AF4AB11CBC923D001BA49B /* BaseSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseSearchTableViewController.m; sourceTree = "<group>"; };
 		18AF4AB31CBC9437001BA49B /* PlatformsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlatformsTableViewController.h; sourceTree = "<group>"; };
@@ -375,6 +378,7 @@
 				18AF4ABB1CBC9610001BA49B /* Travel */,
 				18FED7FF1CC58352006B815D /* Query System */,
 				18124C831CC58CA2008246F6 /* Easter Egg */,
+				189A14DB1CC8E5DD00FF91A4 /* Cancelled Tickets Detail */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -463,6 +467,15 @@
 				186419181CBC25960086A237 /* BookTicketTableViewController.m */,
 			);
 			name = "Book Ticket";
+			sourceTree = "<group>";
+		};
+		189A14DB1CC8E5DD00FF91A4 /* Cancelled Tickets Detail */ = {
+			isa = PBXGroup;
+			children = (
+				189A14D81CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.h */,
+				189A14D91CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.m */,
+			);
+			name = "Cancelled Tickets Detail";
 			sourceTree = "<group>";
 		};
 		18AEF76E1CC1929D005C3DD5 /* User */ = {
@@ -865,6 +878,7 @@
 				186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */,
 				1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */,
 				1837A7EA1CBBD70F00A4BD5E /* main.m in Sources */,
+				189A14DA1CC8E39300FF91A4 /* CancelledTicketDetailsTableViewController.m in Sources */,
 				1864190C1CBC244C0086A237 /* TrainNameSearchTableViewController.m in Sources */,
 				18362D191CBF9D7E00511DDC /* KnowMoreViewController.m in Sources */,
 				18AF4AB81CBC948D001BA49B /* MapViewController.m in Sources */,
