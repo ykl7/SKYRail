@@ -11,6 +11,8 @@
 
 @interface QuerySetupTableViewController ()
 
+@property (strong, nonatomic) AudioController *audioController;
+
 @property (strong, nonatomic) IBOutlet UITextView *queryTextView;
 
 @end
@@ -27,6 +29,9 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.navigationItem.title = @"Have Fun";
+    
+    self.audioController = [[AudioController alloc] init];
+    [self.audioController tryPlayMusic];
 }
 
 - (void)didReceiveMemoryWarning {

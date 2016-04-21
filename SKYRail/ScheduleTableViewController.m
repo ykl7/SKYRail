@@ -89,7 +89,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 50.0;
+    return 60.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -112,7 +112,8 @@
         NSDictionary *temp = [results firstObject];
         
         if (temp) {
-            cell.textLabel.text = [NSString stringWithFormat:@"Platform %@", [temp objectForKey:@"Platform_Name"]];
+            cell.textLabel.text = [NSString stringWithFormat:@"%@", [temp objectForKey:@"Platform_Name"]];
+            [cell.textLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:18.0]];
         }
         
         if (error) {
@@ -127,6 +128,7 @@
     }
     
     cell.detailTextLabel.text = [NSString stringWithFormat:@"Arrival %@, Departure %@", [[completeSet objectAtIndex:indexPath.row] arrTime], [[completeSet objectAtIndex:indexPath.row] depTime]];
+    [cell.detailTextLabel setFont:[UIFont fontWithName:@"Helvetica Neue" size:15.0]];
     
     return cell;
 }

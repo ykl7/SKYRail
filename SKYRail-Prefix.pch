@@ -29,6 +29,8 @@
 #import "BookingHistory.h"
 #import "CancelledTickets.h"
 
+#import "AudioController.h"
+
 #define SVHUD_SHOW dispatch_async(dispatch_get_main_queue(),^{[SVProgressHUD showWithStatus:@"Loading..."];});
 #define SVHUD_HIDE dispatch_async(dispatch_get_main_queue(),^{[SVProgressHUD dismiss];});
 

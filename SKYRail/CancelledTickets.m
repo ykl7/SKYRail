@@ -27,7 +27,7 @@
             self.endPid = [dict[@"Endp_ID"] integerValue];
             self.dateOfJourney = dict[@"Date_Of_Journey"];
             self.personId = [dict[@"Person_id"] integerValue];
-            self.cancelTime = dict[@"Deletion_Time"];
+            self.cancelTime = [NSString stringWithFormat:@"%@", dict[@"Deletion_Time"]];
             
         }
         @catch (NSException *exception)

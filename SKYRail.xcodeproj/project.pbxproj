@@ -22,6 +22,8 @@
 		1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8211CBBD9A500A4BD5E /* SignUpTableViewController.m */; };
 		1837A8251CBBD9B700A4BD5E /* LoginTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */; };
 		1837A82C1CBBECA300A4BD5E /* BookingHistoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */; };
+		1839565A1CC9115A003E0F14 /* AudioController.m in Sources */ = {isa = PBXBuildFile; fileRef = 183956591CC9115A003E0F14 /* AudioController.m */; };
+		1839565E1CC91235003E0F14 /* Star Wars Acapella Theme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1839565D1CC91235003E0F14 /* Star Wars Acapella Theme.mp3 */; };
 		183A519A1CBC437A00B123C3 /* launch scr.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 183A51991CBC437A00B123C3 /* launch scr.jpeg */; };
 		186418FB1CBC22EE0086A237 /* TicketDetailsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */; };
 		186419031CBC23BC0086A237 /* EditUserTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 186419021CBC23BC0086A237 /* EditUserTableViewController.m */; };
@@ -120,6 +122,9 @@
 		1837A8241CBBD9B700A4BD5E /* LoginTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginTableViewController.m; sourceTree = "<group>"; };
 		1837A82A1CBBECA300A4BD5E /* BookingHistoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookingHistoryTableViewController.h; sourceTree = "<group>"; };
 		1837A82B1CBBECA300A4BD5E /* BookingHistoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookingHistoryTableViewController.m; sourceTree = "<group>"; };
+		183956581CC9115A003E0F14 /* AudioController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		183956591CC9115A003E0F14 /* AudioController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioController.m; sourceTree = "<group>"; };
+		1839565D1CC91235003E0F14 /* Star Wars Acapella Theme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Star Wars Acapella Theme.mp3"; sourceTree = "<group>"; };
 		183A51991CBC437A00B123C3 /* launch scr.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "launch scr.jpeg"; sourceTree = "<group>"; };
 		186418F91CBC22EE0086A237 /* TicketDetailsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketDetailsTableViewController.h; sourceTree = "<group>"; };
 		186418FA1CBC22EE0086A237 /* TicketDetailsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketDetailsTableViewController.m; sourceTree = "<group>"; };
@@ -275,6 +280,7 @@
 			isa = PBXGroup;
 			children = (
 				1837A81B1CBBD71900A4BD5E /* App Delegate */,
+				1839565C1CC9116A003E0F14 /* Libraries */,
 				18AEF76F1CC192A2005C3DD5 /* Models */,
 				183A519B1CBC455600B123C3 /* Controllers */,
 				1837A7F11CBBD70F00A4BD5E /* Main.storyboard */,
@@ -365,6 +371,23 @@
 				186418FC1CBC23120086A237 /* Ticket Details */,
 			);
 			name = "Booking History";
+			sourceTree = "<group>";
+		};
+		1839565B1CC91161003E0F14 /* Audio Controller */ = {
+			isa = PBXGroup;
+			children = (
+				183956581CC9115A003E0F14 /* AudioController.h */,
+				183956591CC9115A003E0F14 /* AudioController.m */,
+			);
+			name = "Audio Controller";
+			sourceTree = "<group>";
+		};
+		1839565C1CC9116A003E0F14 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				1839565B1CC91161003E0F14 /* Audio Controller */,
+			);
+			name = Libraries;
 			sourceTree = "<group>";
 		};
 		183A519B1CBC455600B123C3 /* Controllers */ = {
@@ -536,6 +559,7 @@
 		18EDB43D1CC83450006D85A8 /* Platform Images */ = {
 			isa = PBXGroup;
 			children = (
+				1839565D1CC91235003E0F14 /* Star Wars Acapella Theme.mp3 */,
 				18EDB43E1CC83589006D85A8 /* Jaipur Terminal.jpeg */,
 				18EDB43F1CC83589006D85A8 /* Ahmedabad Junction.jpeg */,
 				18EDB4401CC83589006D85A8 /* Amritsar Junction.jpeg */,
@@ -787,6 +811,7 @@
 				18EDB45D1CC83589006D85A8 /* Patna Junction.jpeg in Resources */,
 				18EDB4581CC83589006D85A8 /* Guwahati Junction.jpeg in Resources */,
 				18EDB4571CC83589006D85A8 /* Tatanagar Junction.jpeg in Resources */,
+				1839565E1CC91235003E0F14 /* Star Wars Acapella Theme.mp3 in Resources */,
 				18FED7F61CC57F50006B815D /* SKYRailDB.db in Resources */,
 				18EDB4641CC83589006D85A8 /* Kanpur Junction.jpeg in Resources */,
 				18EDB4541CC83589006D85A8 /* Ahmedabad Junction.jpeg in Resources */,
@@ -890,6 +915,7 @@
 				18FED7FC1CC5832E006B815D /* QueryResultsTableViewController.m in Sources */,
 				186419061CBC23C70086A237 /* ChangePasswordTableViewController.m in Sources */,
 				18FED7D61CC56C18006B815D /* Train.m in Sources */,
+				1839565A1CC9115A003E0F14 /* AudioController.m in Sources */,
 				1837A8221CBBD9A500A4BD5E /* SignUpTableViewController.m in Sources */,
 				18DD32F71CC555C300448A97 /* DBManager.m in Sources */,
 			);

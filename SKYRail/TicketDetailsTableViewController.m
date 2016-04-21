@@ -205,7 +205,7 @@
             NSError *error;
             
             NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"yyyy-mm-dd HH:mm:ss"];
+            [formatter setDateFormat:@"dd/MM/yy HH:mm:ss"];
             
             NSString *stringFromDate = [formatter stringFromDate:[NSDate date]];
             NSLog(@"person id in cancel process %li", personNow);

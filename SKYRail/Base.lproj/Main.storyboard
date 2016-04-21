@@ -231,7 +231,7 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="9tJ-KE-Fbw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="bkt-vT-TTv" style="IBUITableViewCellStyleDefault" id="ZfX-au-9eS">
                                 <rect key="frame" x="0.0" y="114" width="320" height="44"/>
@@ -244,7 +244,7 @@
                                             <rect key="frame" x="15" y="0.0" width="290" height="43"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -480,6 +480,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="naG-4v-eJw">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="XUO-IX-61L">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backToLast:" destination="EXQ-u3-OlN" id="JTj-6G-CLO"/>
                             </connections>
@@ -500,14 +501,14 @@
             </objects>
             <point key="canvasLocation" x="2923" y="133"/>
         </scene>
-        <!--Cancelled Ticket Details Table View Controller-->
+        <!--Ticket-->
         <scene sceneID="XjP-1V-TZi">
             <objects>
                 <tableViewController id="EBi-md-NIQ" customClass="CancelledTicketDetailsTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="qZO-Ks-9Xb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
                             <tableViewSection headerTitle="Ticket info" id="WRW-KP-1HR">
                                 <cells>
@@ -521,7 +522,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PNR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NBg-KA-3Tb">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -545,7 +546,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Train ID" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQb-zZ-GIt">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -569,7 +570,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Distance" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tiQ-dt-xFE">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -593,7 +594,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmx-zN-LlV">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -617,7 +618,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cancellation Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q2l-VZ-AdC">
                                                     <rect key="frame" x="8" y="0.0" width="304" height="43"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -639,8 +640,9 @@
                             <outlet property="delegate" destination="EBi-md-NIQ" id="Mby-kW-aly"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="v8i-be-oc2">
+                    <navigationItem key="navigationItem" title="Ticket" id="v8i-be-oc2">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="94a-dC-7On">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backToList:" destination="EBi-md-NIQ" id="Uu0-ua-Ehn"/>
                             </connections>
@@ -1064,7 +1066,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="G8d-Xu-kz6">
+                            <tableViewSection headerTitle="where" id="G8d-Xu-kz6">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KwE-Dz-3oK">
                                         <rect key="frame" x="0.0" y="114" width="320" height="44"/>
@@ -1114,7 +1116,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="L9F-Pc-Y1u">
+                            <tableViewSection headerTitle="when" id="L9F-Pc-Y1u">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ddq-Gl-UAH">
                                         <rect key="frame" x="0.0" y="253" width="320" height="44"/>
@@ -1141,7 +1143,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-3" id="lZr-82-Z1M">
+                            <tableViewSection headerTitle="how many" id="lZr-82-Z1M">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="4ZR-yh-8wM">
                                         <rect key="frame" x="0.0" y="348" width="320" height="44"/>
@@ -1168,7 +1170,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-4" id="gCa-AL-Y9Z">
+                            <tableViewSection headerTitle="Go" id="gCa-AL-Y9Z">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="itW-N0-7jq">
                                         <rect key="frame" x="0.0" y="443" width="320" height="44"/>
@@ -1314,6 +1316,7 @@
                             <constraint firstItem="Ud0-4l-Hg3" firstAttribute="trailing" secondItem="LAv-kq-4JF" secondAttribute="trailing" id="K4N-ky-Pag"/>
                             <constraint firstItem="Ud0-4l-Hg3" firstAttribute="leading" secondItem="LAv-kq-4JF" secondAttribute="leading" id="M8Z-Ag-aJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="LAv-kq-4JF" secondAttribute="trailing" id="ViI-2y-PzL"/>
+                            <constraint firstItem="mrx-MF-kGT" firstAttribute="top" secondItem="Ud0-4l-Hg3" secondAttribute="bottom" constant="8" id="rnE-6n-dTG"/>
                             <constraint firstItem="Ud0-4l-Hg3" firstAttribute="top" secondItem="LAv-kq-4JF" secondAttribute="bottom" constant="25" id="sDU-Wg-R3a"/>
                             <constraint firstItem="LAv-kq-4JF" firstAttribute="top" secondItem="UJ0-Aw-s5f" secondAttribute="bottom" constant="8" id="xvO-l7-Rft"/>
                             <constraint firstItem="LAv-kq-4JF" firstAttribute="centerX" secondItem="C16-vw-Fj2" secondAttribute="centerX" id="zja-Jn-gQX"/>
@@ -1321,6 +1324,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="xPW-g5-Z11">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="7LY-87-Ayo">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="backToList:" destination="IMS-yr-E40" id="kA5-m2-3Rw"/>
                             </connections>
@@ -1381,7 +1385,7 @@
             </objects>
             <point key="canvasLocation" x="2957" y="3330"/>
         </scene>
-        <!--Schedule Table View Controller-->
+        <!--Schedule-->
         <scene sceneID="8rD-u3-en9">
             <objects>
                 <tableViewController id="Eig-nB-p6H" customClass="ScheduleTableViewController" sceneMemberID="viewController">
@@ -1420,7 +1424,7 @@
                             <outlet property="delegate" destination="Eig-nB-p6H" id="aOQ-9H-Bkc"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="oLD-Js-qQM">
+                    <navigationItem key="navigationItem" title="Schedule" id="oLD-Js-qQM">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="LJ6-6b-Xak">
                             <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
@@ -1444,7 +1448,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <sections>
-                            <tableViewSection headerTitle="Section-1" id="X8P-nf-POm">
+                            <tableViewSection headerTitle="alter" id="X8P-nf-POm">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="PNE-4n-Zh7">
                                         <rect key="frame" x="0.0" y="114" width="320" height="44"/>
@@ -1517,7 +1521,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="GyX-p4-Wrn">
+                            <tableViewSection headerTitle="go" id="GyX-p4-Wrn">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="NYA-HH-ujd">
                                         <rect key="frame" x="0.0" y="297" width="320" height="44"/>
@@ -1621,7 +1625,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Section-2" id="UFM-9G-sDU">
+                            <tableViewSection headerTitle="sure?" id="UFM-9G-sDU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vNz-9z-DWW">
                                         <rect key="frame" x="0.0" y="253" width="320" height="44"/>
@@ -1966,7 +1970,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome to SKYRail" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLL-kY-jHk">
                                 <rect key="frame" x="26" y="425" width="274" height="35"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>

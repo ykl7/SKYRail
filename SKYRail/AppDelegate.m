@@ -21,6 +21,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    _window.tintColor = [UIColor blackColor];
+    
     NSString *bundledFilePath = [[NSBundle mainBundle] pathForResource:@"SKYRailDB.db" ofType:nil];
     NSString *filePath = [self documentsPathForFileName:@"SKYRailDB.db"];
     

@@ -56,7 +56,7 @@
         {
             dispatch_async(dispatch_get_main_queue(), ^{
                 SVHUD_HIDE;
-                _dateLabel.text = [NSString stringWithFormat:@"Cancellation Date : %@", [[cancelledTickets firstObject] cancelTime]];
+                _deletionLabel.text = [NSString stringWithFormat:@"Cancellation Date : %@", [[cancelledTickets firstObject] cancelTime]];
                 _pnrLabel.text = [NSString stringWithFormat:@"PNR : %li", [[[cancelledTickets firstObject] PNR] integerValue]];
                 _distanceLabel.text = [NSString stringWithFormat:@"Distance : %@ km", [[cancelledTickets firstObject] distance]];
                 _dateLabel.text = [NSString stringWithFormat:@"Ticket Date : %@", [[cancelledTickets firstObject] dateOfJourney]];
@@ -65,6 +65,11 @@
             });
         }
     });
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section

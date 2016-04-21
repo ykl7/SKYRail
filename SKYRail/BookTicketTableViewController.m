@@ -85,7 +85,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     if (indexPath.section == 3)
     {
-        if ([_alightingStationTextField.text length] > 0 && [_boardingStationTextField.text length] && [_numberOfSeatsTextField.text length] > 0 && [_dateOfJourneryTextField.text length] == 6)
+        if ([_alightingStationTextField.text length] > 0 && [_boardingStationTextField.text length] && [_numberOfSeatsTextField.text length] > 0 && [_dateOfJourneryTextField.text length] == 10)
         {
             @try
             {
